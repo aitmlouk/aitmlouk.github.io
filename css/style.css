@@ -1122,11 +1122,11 @@ ul.grid li a,ul.grid li img {
 /* contanct
  **************************************************/
 .contact-office {
-	background: #fff url('../img/contact-bg-1.png') no-repeat;
+	background: #fff url('../img/contact-bg.png') no-repeat;
 }
 
 .contact-lab {
-	background: #fff url('../img/contact-bg-2.png') no-repeat;
+	background: #fff url('../img/contact-bg.png') no-repeat;
 	color: #fff;
 }
 

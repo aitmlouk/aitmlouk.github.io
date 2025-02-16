@@ -1,14 +1,14 @@
 ul#navigation li.external:hover .icon, ul#navigation li.currentmenu .icon{
-	color: #9e1b34;
+	color: #1b999e;
 }
 .ul-boxed li {
-	border-left-color:#9e1b34;
+	border-left-color:#471b9e;
 }
 ul.ul-card li .dy .year {
-	background-color: #9e1b34;
+	background-color: #1b969e;
 }
 ul.ul-dates div.dates span {
-	background-color: #9e1b34;
+	background-color: #125e69;
 }
 ul.timeline li .date {
 	background: #9e1b34;
@@ -38,10 +38,10 @@ ul.timeline li .data {
 /* socpndary color 
 **************************************************/
 ul.ul-card li .dy .degree {
-	background-color: #691223;
+	background-color: #125e69;
 }
 ul.ul-dates div.dates span:last-child {
-	background-color: #691223;
+	background-color: #1b969e;
 }
 ul.timeline li.open .circle {
 	background-color: #691223;

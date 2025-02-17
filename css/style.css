@@ -1130,9 +1130,9 @@ ul.grid li a,ul.grid li img {
 	color: #fff;
 }
 
-/*.contact-office .icon-huge, .contact-lab .icon-huge{
-	color: #03cc85;
-}*/
+.contact-office .icon-huge, .contact-lab .icon-huge{
+	color: #428bca;
+}
 
 
 .icon-huge {

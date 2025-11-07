@@ -1,0 +1,857 @@
+/* Academic Portfolio Custom Styles */
+/* Dr. Addi Ait-Mlouk - Enhanced Template Customizations */
+
+/* ===== ACADEMIC PORTFOLIO SPECIFIC CUSTOMIZATIONS ===== */
+
+/* Override brand logo size for academic context */
+.brand-logo {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+
+.footer-logo {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+}
+
+.loading-logo-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid var(--white);
+    animation: logoFloat 2s ease-in-out infinite;
+}
+
+/* Modern Blue & Dark Blue & Purple Theme - 2024 Design System */
+:root {
+    /* Primary Blue Palette */
+    --primary-color: #2563eb;        /* Modern blue-600 */
+    --primary-light: #3b82f6;        /* blue-500 */
+    --primary-dark: #1d4ed8;         /* blue-700 */
+    --primary-darker: #1e3a8a;       /* blue-800 */
+    
+    /* Secondary Dark Blue Palette */
+    --secondary-color: #1e40af;      /* Dark blue-800 */
+    --secondary-light: #3b82f6;      /* blue-500 */
+    --secondary-dark: #1e3a8a;       /* blue-800 */
+    --secondary-darker: #1e293b;     /* slate-800 */
+    
+    /* Accent Purple Colors */
+    --accent-color: #7c3aed;         /* purple-600 for highlights */
+    --accent-light: #8b5cf6;         /* purple-500 */
+    --accent-dark: #6d28d9;          /* purple-700 */
+    
+    /* Gradient Definitions - Latest 2024 Trends */
+    --gradient-primary: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
+    --gradient-secondary: linear-gradient(135deg, #1e40af 0%, #7c3aed 100%);
+    --gradient-accent: linear-gradient(135deg, #3b82f6 0%, #2563eb 50%, #7c3aed 100%);
+    --gradient-hero: linear-gradient(135deg, #2563eb 0%, #1e40af 35%, #7c3aed 70%, #8b5cf6 100%);
+    --gradient-card: linear-gradient(145deg, rgba(255, 255, 255, 0.9) 0%, rgba(248, 250, 252, 0.8) 100%);
+    
+    /* Glass Morphism - 2024 Trend */
+    --glass-bg: rgba(37, 99, 235, 0.1);
+    --glass-border: rgba(37, 99, 235, 0.2);
+    --glass-shadow: 0 8px 32px rgba(30, 64, 175, 0.1);
+    --glass-backdrop: blur(20px);
+    
+    /* Dark Mode Colors */
+    --dark-bg-primary: #0f172a;      /* Deep slate dark */
+    --dark-bg-secondary: #1e293b;    /* Slate-800 */
+    --dark-bg-tertiary: #334155;     /* Slate-700 */
+    --dark-text-primary: #f1f5f9;
+    --dark-text-secondary: #cbd5e1;
+    --dark-glass-bg: rgba(30, 64, 175, 0.2);
+    --dark-glass-border: rgba(59, 130, 246, 0.1);
+    
+    /* Shadows - Enhanced for 2024 */
+    --shadow-soft: 0 2px 15px rgba(37, 99, 235, 0.08);
+    --shadow-medium: 0 8px 30px rgba(30, 64, 175, 0.12);
+    --shadow-strong: 0 20px 40px rgba(37, 99, 235, 0.15);
+    --shadow-glow: 0 0 30px rgba(37, 99, 235, 0.25);
+    --shadow-glow-blue: 0 0 30px rgba(30, 64, 175, 0.25);
+    --shadow-glow-purple: 0 0 30px rgba(124, 58, 237, 0.25);
+    
+    /* Modern Spacing Scale */
+    --space-3xs: 0.125rem;   /* 2px */
+    --space-2xs: 0.25rem;    /* 4px */
+    --space-xs: 0.5rem;      /* 8px */
+    --space-sm: 0.75rem;     /* 12px */
+    --space-md: 1rem;        /* 16px */
+    --space-lg: 1.5rem;      /* 24px */
+    --space-xl: 2rem;        /* 32px */
+    --space-2xl: 3rem;       /* 48px */
+    --space-3xl: 4rem;       /* 64px */
+    --space-4xl: 6rem;       /* 96px */
+    --space-5xl: 8rem;       /* 128px */
+    
+    /* Modern Typography Scale */
+    --text-xs: 0.75rem;      /* 12px */
+    --text-sm: 0.875rem;     /* 14px */
+    --text-base: 1rem;       /* 16px */
+    --text-lg: 1.125rem;     /* 18px */
+    --text-xl: 1.25rem;      /* 20px */
+    --text-2xl: 1.5rem;      /* 24px */
+    --text-3xl: 1.875rem;    /* 30px */
+    --text-4xl: 2.25rem;     /* 36px */
+    --text-5xl: 3rem;        /* 48px */
+    --text-6xl: 3.75rem;     /* 60px */
+    --text-7xl: 4.5rem;      /* 72px */
+    
+    /* Modern Border Radius */
+    --radius-xs: 0.25rem;    /* 4px */
+    --radius-sm: 0.375rem;   /* 6px */
+    --radius-md: 0.5rem;     /* 8px */
+    --radius-lg: 0.75rem;    /* 12px */
+    --radius-xl: 1rem;       /* 16px */
+    --radius-2xl: 1.5rem;    /* 24px */
+    --radius-3xl: 2rem;      /* 32px */
+    --radius-full: 9999px;   /* Full rounded */
+    
+    /* Animation Easing - 2024 Trends */
+    --ease-linear: linear;
+    --ease-in: cubic-bezier(0.4, 0, 1, 1);
+    --ease-out: cubic-bezier(0, 0, 0.2, 1);
+    --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+    --ease-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    --ease-spring: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    
+    /* Transition Durations */
+    --duration-fast: 150ms;
+    --duration-normal: 250ms;
+    --duration-slow: 350ms;
+    --duration-slower: 500ms;
+}
+
+/* Enhanced hero section for academic portfolio */
+.hero-subtitle {
+    font-size: 1.125rem;
+    line-height: 1.7;
+}
+
+/* Academic specific card styling */
+.hero-info-card {
+    min-height: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.hero-info-card h5 {
+    font-size: 1.125rem;
+    font-weight: 600;
+}
+
+/* Academic statistics styling */
+.countdown-number {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--primary-color);
+}
+
+.countdown-label {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+/* Enhanced feature cards for academic context */
+.feature-card {
+    min-height: 200px;
+    transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(37, 99, 235, 0.15);
+}
+
+/* Academic timeline styling (for future sections) */
+.timeline-container {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.timeline-item {
+    background: var(--white);
+    border-radius: 15px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    border-left: 4px solid var(--primary-color);
+    position: relative;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -8px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    border: 3px solid var(--white);
+}
+
+/* Academic publications styling */
+.publication-card {
+    border-left: 4px solid var(--primary-color);
+    transition: all 0.3s ease;
+}
+
+.publication-card:hover {
+    border-left-color: var(--secondary-color);
+    transform: translateX(5px);
+}
+
+/* Research project cards */
+.project-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+.project-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--gradient-primary);
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(37, 99, 235, 0.2);
+}
+
+/* Academic achievement badges */
+.achievement-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: var(--white);
+    border-radius: 25px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin: 0.25rem;
+}
+
+.achievement-badge i {
+    margin-right: 0.5rem;
+    font-size: 1rem;
+}
+
+/* Enhanced search functionality for academic content */
+.academic-search {
+    position: relative;
+    max-width: 500px;
+    margin: 0 auto 2rem;
+}
+
+.academic-search input {
+    width: 100%;
+    padding: 1rem 1rem 1rem 3rem;
+    border: 2px solid var(--gray-200);
+    border-radius: 50px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.academic-search input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.academic-search i {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-muted);
+}
+
+/* Academic gallery enhancements */
+.academic-gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.academic-gallery-item img {
+    transition: transform 0.3s ease;
+}
+
+.academic-gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+.academic-gallery-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(37, 99, 235, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.academic-gallery-item:hover .academic-gallery-overlay {
+    opacity: 1;
+}
+
+/* Contact form academic styling */
+.academic-contact-form {
+    background: var(--white);
+    border-radius: 20px;
+    padding: 3rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.academic-contact-form .form-control {
+    border: 2px solid var(--gray-200);
+    border-radius: 10px;
+    padding: 1rem;
+    transition: all 0.3s ease;
+}
+
+.academic-contact-form .form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+/* Loading screen academic customization */
+.loading-screen {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 50%, var(--accent-color) 100%);
+}
+
+/* Mobile responsiveness for academic content */
+@media (max-width: 768px) {
+    .hero-info-card {
+        min-height: 220px;
+        margin-bottom: 1.5rem;
+    }
+    
+    .countdown-number {
+        font-size: 1.5rem;
+    }
+    
+    .feature-card {
+        margin-bottom: 1.5rem;
+    }
+    
+    .timeline-item {
+        margin-bottom: 1.5rem;
+        padding: 1.5rem;
+    }
+    
+    .academic-contact-form {
+        padding: 2rem;
+    }
+    
+    .brand-logo {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-info-card {
+        min-height: 200px;
+    }
+    
+    .countdown-number {
+        font-size: 1.25rem;
+    }
+    
+    .countdown-label {
+        font-size: 0.7rem;
+    }
+    
+    .timeline-item {
+        padding: 1rem;
+    }
+    
+    .academic-contact-form {
+        padding: 1.5rem;
+    }
+}
+
+/* Print styles for academic documents */
+@media print {
+    .hero-section {
+        background: white !important;
+        color: black !important;
+        min-height: auto;
+        page-break-after: always;
+    }
+    
+    .floating-shapes,
+    .loading-screen,
+    .back-to-top,
+    .navbar {
+        display: none !important;
+    }
+    
+    .hero-info-card,
+    .feature-card {
+        break-inside: avoid;
+        box-shadow: none !important;
+        border: 1px solid #ccc;
+    }
+    
+    .modern-footer {
+        background: white !important;
+        color: black !important;
+    }
+}
+
+/* Accessibility enhancements */
+@media (prefers-reduced-motion: reduce) {
+    .hero-info-card,
+    .feature-card,
+    .project-card {
+        transition: none;
+    }
+    
+    .floating-shapes .shape {
+        animation: none;
+    }
+    
+    .loading-logo-img {
+        animation: none;
+    }
+}
+
+/* Focus states for better accessibility */
+.btn:focus,
+.nav-link:focus,
+.form-control:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .hero-info-card,
+    .feature-card {
+        border: 2px solid var(--text-primary);
+    }
+
+    .btn-primary {
+        border: 2px solid var(--white);
+    }
+}
+
+/* ===== NAVBAR OVERLAP FIX ===== */
+/* Add padding-top to all main content sections to prevent navbar overlap */
+.section-padding:first-of-type,
+section.section-padding:first-child,
+section:first-of-type {
+    padding-top: 120px !important;
+}
+
+/* Ensure hero sections have adequate spacing */
+.hero-section,
+.modern-hero {
+    padding-top: 100px;
+}
+
+/* Dark mode text colors fix */
+[data-theme="dark"] {
+    --text-primary: var(--dark-text-primary);
+    --text-secondary: var(--dark-text-secondary);
+}
+
+/* Additional spacing for sections that might be cut off */
+body {
+    padding-top: 0;
+}
+
+main {
+    padding-top: 80px;
+}
+
+/* Responsive navbar spacing */
+@media (max-width: 991px) {
+    .section-padding:first-of-type,
+    section.section-padding:first-child,
+    section:first-of-type {
+        padding-top: 100px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .section-padding:first-of-type,
+    section.section-padding:first-child,
+    section:first-of-type {
+        padding-top: 90px !important;
+    }
+
+    .hero-section,
+    .modern-hero {
+        padding-top: 90px;
+    }
+}
+
+/* ===== NEWS PAGE STYLES ===== */
+/* News list container */
+.news-list {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Individual news item card */
+.news-item {
+    background: var(--white);
+    border-radius: 15px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    border-left: 4px solid var(--primary-color);
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.news-item:hover {
+    transform: translateX(5px);
+    box-shadow: 0 8px 25px rgba(37, 99, 235, 0.15);
+    border-left-color: var(--secondary-color);
+}
+
+/* News title */
+.news-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+    line-height: 1.4;
+}
+
+/* News content */
+.news-content {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+}
+
+/* News link */
+.news-link {
+    margin: 1rem 0;
+}
+
+.news-link a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.news-link a:hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+
+/* News date */
+.news-date {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    font-weight: 600;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* Dark mode support for news items */
+[data-theme="dark"] .news-item {
+    background: var(--dark-bg-secondary);
+    border-left-color: var(--primary-light);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .news-item:hover {
+    box-shadow: 0 8px 25px rgba(59, 130, 246, 0.2);
+}
+
+[data-theme="dark"] .news-title {
+    color: var(--dark-text-primary);
+}
+
+[data-theme="dark"] .news-content {
+    color: var(--dark-text-secondary);
+}
+
+[data-theme="dark"] .news-date {
+    border-top-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive news items */
+@media (max-width: 768px) {
+    .news-item {
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .news-title {
+        font-size: 1.25rem;
+    }
+
+    .news-content {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .news-item {
+        padding: 1.25rem;
+    }
+
+    .news-title {
+        font-size: 1.1rem;
+    }
+}
+
+/* ===== IMPROVED LOADING SPINNER ===== */
+/* Simple modern spinner for loading screen */
+.loading-spinner {
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.spinner-circle {
+    width: 60px;
+    height: 60px;
+    border: 4px solid rgba(255, 255, 255, 0.2);
+    border-top-color: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    animation: spinnerRotate 0.8s linear infinite;
+}
+
+@keyframes spinnerRotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Loading text styling */
+.loading-text {
+    text-align: center;
+}
+
+.loading-text .brand-text {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.95);
+    margin: 0;
+    letter-spacing: 0.5px;
+}
+
+/* Responsive spinner */
+@media (max-width: 768px) {
+    .spinner-circle {
+        width: 50px;
+        height: 50px;
+        border-width: 3px;
+    }
+
+    .loading-text .brand-text {
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .spinner-circle {
+        width: 40px;
+        height: 40px;
+        border-width: 3px;
+    }
+
+    .loading-text .brand-text {
+        font-size: 1.1rem;
+    }
+}
+
+/* ===== SERVICES SECTION STYLES ===== */
+/* Service cards styling */
+.service-icon {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    background: linear-gradient(135deg, rgba(37, 99, 235, 0.1), rgba(59, 130, 246, 0.05));
+    flex-shrink: 0;
+}
+
+.service-icon i {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+.service-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 0.75rem;
+}
+
+.service-description {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+}
+
+/* Dark mode support for services */
+[data-theme="dark"] .service-icon {
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.2), rgba(37, 99, 235, 0.1));
+}
+
+[data-theme="dark"] .service-icon i {
+    color: var(--secondary-color);
+}
+
+[data-theme="dark"] .service-title {
+    color: var(--dark-text-primary);
+}
+
+[data-theme="dark"] .service-description {
+    color: var(--dark-text-secondary);
+}
+
+/* Responsive service cards */
+@media (max-width: 768px) {
+    .service-icon {
+        width: 45px;
+        height: 45px;
+    }
+
+    .service-icon i {
+        font-size: 1.25rem;
+    }
+
+    .service-title {
+        font-size: 1.1rem;
+    }
+
+    .service-description {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .service-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .service-icon i {
+        font-size: 1.1rem;
+    }
+
+    .service-title {
+        font-size: 1rem;
+    }
+}
+
+/* ===== RESEARCH INTERESTS TAGS ===== */
+.research-interests-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    justify-content: center;
+    padding: 2rem 1rem;
+}
+
+.interest-tag {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background: linear-gradient(135deg, rgba(37, 99, 235, 0.1), rgba(59, 130, 246, 0.05));
+    border: 1px solid rgba(37, 99, 235, 0.2);
+    border-radius: 50px;
+    color: var(--text-primary);
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    cursor: default;
+}
+
+.interest-tag:hover {
+    background: linear-gradient(135deg, rgba(37, 99, 235, 0.15), rgba(59, 130, 246, 0.1));
+    border-color: var(--primary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.15);
+}
+
+/* Dark mode support for interest tags */
+[data-theme="dark"] .interest-tag {
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.15), rgba(37, 99, 235, 0.08));
+    border-color: rgba(59, 130, 246, 0.3);
+    color: var(--dark-text-primary);
+}
+
+[data-theme="dark"] .interest-tag:hover {
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.25), rgba(37, 99, 235, 0.15));
+    border-color: var(--secondary-color);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.2);
+}
+
+/* Responsive interest tags */
+@media (max-width: 768px) {
+    .research-interests-tags {
+        gap: 0.5rem;
+        padding: 1.5rem 0.5rem;
+    }
+
+    .interest-tag {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .research-interests-tags {
+        gap: 0.4rem;
+        padding: 1rem 0;
+    }
+
+    .interest-tag {
+        padding: 0.5rem 1rem;
+        font-size: 0.8rem;
+    }
+}
+
+/* ===== PH.D STUDENTS SECTION ===== */
+.student-image-wrapper img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.featured-project-card .project-title.student-name {
+    font-size: 1.3rem;
+}
+
+.featured-project-card .project-category.student-university {
+    margin-top: 1rem;
+}

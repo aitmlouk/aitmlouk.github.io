@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Addi Ait-Mlouk - Academic Portfolio | Home</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Dr. Addi Ait-Mlouk - Leading researcher and educator specializing in data science, machine learning, and artificial intelligence.">
+    <meta name="keywords" content="Dr. Addi Ait-Mlouk, academic, researcher, data science, machine learning, AI, Sweden">
+    <meta name="author" content="Dr. Addi Ait-Mlouk">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Dr. Addi Ait-Mlouk - Academic Portfolio">
+    <meta property="og:description" content="Leading researcher and educator specializing in data science, machine learning, and artificial intelligence.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://addi-ait-mlouk.github.io">
+    <meta property="og:image" content="img/personal/me-2.jpg">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Dr. Addi Ait-Mlouk - Academic Portfolio">
+    <meta name="twitter:description" content="Leading researcher and educator specializing in data science, machine learning, and artificial intelligence.">
+    
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#2563eb">
+    <link rel="manifest" href="manifest.json">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Dr. Addi Ait-Mlouk">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="img/personal/me-2.jpg">
+    <link rel="apple-touch-icon" href="img/personal/me-2.jpg">
+    
+    <!-- Preload Critical Resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" as="style">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/portfolio-custom.css">
+    <link rel="stylesheet" href="css/modern-multipage.css">
+    
+    <!-- Enhanced Theme Initialization Script -->
+    <script>
+        (function() {
+            try {
+                const savedTheme = localStorage.getItem('theme') || 'light';
+                console.log('Initializing theme:', savedTheme);
+                
+                // Robust DOM element checking and setting
+                function setThemeOnElement(element, theme) {
+                    if (element && typeof element.setAttribute === 'function') {
+                        element.setAttribute('data-theme', theme);
+                        return true;
+                    }
+                    return false;
+                }
+                
+                // Set theme on document element immediately
+                setThemeOnElement(document.documentElement, savedTheme);
+                
+                // Handle body element
+                function initializeBodyTheme() {
+                    if (document.body) {
+                        setThemeOnElement(document.body, savedTheme);
+                        
+                        // Add class-based styling for immediate effect
+                        if (savedTheme === 'dark') {
+                            document.body.classList.add('dark-theme');
+                            document.documentElement.classList.add('dark-theme');
+                        } else {
+                            document.body.classList.add('light-theme');
+                            document.documentElement.classList.add('light-theme');
+                        }
+                    }
+                }
+                
+                // Initialize immediately if body exists, otherwise wait
+                if (document.body) {
+                    initializeBodyTheme();
+                } else {
+                    // Multiple fallback approaches
+                    if (document.readyState === 'loading') {
+                        document.addEventListener('DOMContentLoaded', initializeBodyTheme);
+                    } else {
+                        // DOM is already ready
+                        setTimeout(initializeBodyTheme, 0);
+                    }
+                    
+                    // Additional fallback
+                    window.addEventListener('load', initializeBodyTheme);
+                }
+                
+            } catch (error) {
+                console.error('Theme initialization error:', error);
+                // Fallback: set light theme
+                if (document.documentElement) {
+                    document.documentElement.setAttribute('data-theme', 'light');
+                }
+            }
+        })();
+    </script>
+</head>
+
+<body class="modern-body">
+    <!-- Loading Screen with Modern Design -->
+    <div id="loading-screen" class="loading-screen modern-loading">
+        <div class="loading-content">
+            <div class="loading-spinner">
+                <div class="spinner-circle"></div>
+            </div>
+            <div class="loading-text">
+                <h3 class="brand-text">Loading...</h3>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modern Navigation with Glass Morphism -->
+    <nav id="main-navbar" class="navbar navbar-expand-lg fixed-top modern-nav glass-nav" data-aos="fade-down">
+        <div class="container-fluid px-4">
+            <a class="navbar-brand modern-brand" href="home.html">
+                <div class="brand-container">
+                    <img src="img/personal/me-2.jpg" alt="Dr. Addi Ait-Mlouk" class="brand-logo">
+                    <span class="brand-text"></span>
+                </div>
+            </a>
+            
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto modern-nav-list">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="home.html" data-page="home">
+                            <i class="fas fa-home nav-icon"></i>
+                            <span>Home</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html" data-page="about">
+                            <i class="fas fa-user nav-icon"></i>
+                            <span>About</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="research.html" data-page="research">
+                            <i class="fas fa-microscope nav-icon"></i>
+                            <span>Research</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="publications.html" data-page="publications">
+                            <i class="fas fa-file-alt nav-icon"></i>
+                            <span>Publications</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="projects.html" data-page="projects">
+                            <i class="fas fa-project-diagram nav-icon"></i>
+                            <span>Projects</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="teaching.html" data-page="teaching">
+                            <i class="fas fa-chalkboard-teacher nav-icon"></i>
+                            <span>Teaching</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="divers.html" data-page="divers">
+                            <i class="fas fa-th nav-icon"></i>
+                            <span>Divers</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html" data-page="contact">
+                            <i class="fas fa-envelope nav-icon"></i>
+                            <span>Contact</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <!-- Dark Mode Toggle -->
+                <div class="navbar-actions d-flex align-items-center">
+                    <button id="theme-toggle" class="btn btn-ghost btn-sm me-3" aria-label="Toggle theme">
+                        <i class="fas fa-sun theme-icon light-icon"></i>
+                        <i class="fas fa-moon theme-icon dark-icon"></i>
+                    </button>
+                    
+                    <button class="navbar-toggler modern-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                        <span class="toggler-line"></span>
+                        <span class="toggler-line"></span>
+                        <span class="toggler-line"></span>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section with 2024 Design Trends -->
+    <section id="hero" class="hero-section modern-hero">
+        <!-- Animated Background -->
+        <div class="hero-background">
+            <div class="gradient-orbs">
+                <div class="orb orb-1"></div>
+                <div class="orb orb-2"></div>
+                <div class="orb orb-3"></div>
+                <div class="orb orb-4"></div>
+            </div>
+            <div class="mesh-gradient"></div>
+        </div>
+        
+        <div class="container">
+            <div class="row align-items-center min-vh-100">
+                <div class="col-lg-6 hero-content" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="hero-badge modern-badge" data-aos="fade-up" data-aos-delay="200">
+                        <i class="fas fa-sparkles badge-icon"></i>
+                        <span class="badge-text">Academic Excellence</span>
+                        <div class="badge-glow"></div>
+                    </div>
+                    
+                    <h1 class="hero-title modern-title" data-aos="fade-up" data-aos-delay="400">
+                        <span class="title-line">Hello, I'm</span>
+                        <span class="title-highlight">Dr. Addi Ait-Mlouk</span>
+                        <span class="title-subtitle">Associate Professor & Researcher</span>
+                    </h1>
+                    
+                    <p class="hero-description modern-description" data-aos="fade-up" data-aos-delay="600">
+                        <strong>Associate Professor (Docent)</strong> of Artificial Intelligence and Data Science at the 
+                        <span class="highlight-text">University of Skövde</span>, Sweden. 
+                        Former Director of the Master’s Programme in Data Science, with research expertise spanning 
+                        <span class="highlight-text">Federated Learning</span>, 
+                        <span class="highlight-text">Machine Learning</span>, and 
+                        <span class="highlight-text">Data Mining</span>. 
+                        My work focuses on developing scalable, secure, and practical AI systems that bridge the gap between theory and real-world applications. 
+                        I am passionate about leveraging AI and data-driven methods to address complex societal and industrial challenges.
+                    </p>
+
+
+                    <div class="hero-tags" data-aos="fade-up" data-aos-delay="800">
+                        <span class="interest-tag">Federated Learning</span>
+                        <span class="interest-tag">Decentralized AI</span>
+                        <span class="interest-tag">Data Science</span>
+                        <span class="interest-tag">Artificial Intelligence</span>
+                        <span class="interest-tag">ML/DL/ NLP / Conv AI</span>
+                        <span class="interest-tag">Data Mining</span>
+                        <span class="interest-tag">Information Retrieval</span>
+                    </div>
+
+                    <div class="hero-actions" data-aos="fade-up" data-aos-delay="1000">
+                        <a href="about.html" class="btn btn-primary btn-lg modern-btn-primary">
+                            <i class="fas fa-arrow-right me-2"></i>
+                            <span>Discover My Work</span>
+                            <div class="btn-glow"></div>
+                        </a>
+                        <a href="contact.html" class="btn btn-outline-primary btn-lg">
+                            <i class="fas fa-comments me-2"></i>
+                            <span>Let's Connect</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Interactive Profile Section -->
+                <div class="col-lg-6" data-aos="fade-left" data-aos-delay="600">
+                    <div class="hero-profile-section">
+                        <div class="profile-card modern-glass">
+                            <div class="profile-image-container">
+                                <img src="img/personal/me-2.jpg" alt="Dr. Addi Ait-Mlouk" class="profile-image">
+                                <div class="status-indicator" title="Available for collaboration">
+                                    <div class="status-dot"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="profile-info">
+                                <h3 class="profile-name">Dr. Addi Ait-Mlouk</h3>
+                                <p class="profile-title">Associate Professor (Docent) & Researcher</p>
+                                <div class="profile-location">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>Sweden</span>
+                                </div>
+                            </div>
+                            
+                            <div class="profile-social">
+                                <a href="https://www.linkedin.com/in/addi-ait-mlouk-phd-32a85056" class="social-btn" data-tooltip="LinkedIn">
+                                    <i class="fab fa-linkedin"></i>
+                                </a>
+                                <a href="https://www.researchgate.net/profile/Addi_Ait-Mlouk" class="social-btn" data-tooltip="ResearchGate">
+                                    <i class="fab fa-researchgate"></i>
+                                </a>
+                                <a href="https://github.com/aitmlouk" class="social-btn" data-tooltip="GitHub">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="https://scholar.google.com/citations?user=nvgiplcAAAAJ&hl=en" class="social-btn" data-tooltip="Google Scholar">
+                                    <i class="fab fa-google-scholar"></i>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <!-- Quick Access Cards -->
+                        <div class="quick-access-grid" data-aos="fade-up" data-aos-delay="800">
+
+                            <div class="quick-card" data-hover-effect="glow">
+                                <a href="teaching.html" class="card-link">
+                                    <div class="card-icon">
+                                        <i class="fas fa-chalkboard-teacher"></i>
+                                    </div>
+                                    <h4>Teaching</h4>
+                                    <p>Courses & educational content</p>
+                                </a>
+                            </div>
+
+                            <div class="quick-card" data-hover-effect="glow">
+                                <a href="research.html" class="card-link">
+                                    <div class="card-icon">
+                                        <i class="fas fa-microscope"></i>
+                                    </div>
+                                    <h4>Research</h4>
+                                    <p>Explore my latest research</p>
+                                </a>
+                            </div>
+                            
+                            <div class="quick-card" data-hover-effect="glow">
+                                <a href="projects.html" class="card-link">
+                                    <div class="card-icon">
+                                        <i class="fas fa-project-diagram"></i>
+                                    </div>
+                                    <h4>Projects</h4>
+                                    <p>Innovative solutions</p>
+                                </a>
+                            </div>
+
+                            <div class="quick-card" data-hover-effect="glow">
+                                <a href="publications.html" class="card-link">
+                                    <div class="card-icon">
+                                        <i class="fas fa-file-alt"></i>
+                                    </div>
+                                    <h4>Publications</h4>
+                                    <p>Academic papers & articles</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- Featured Projects Section -->
+    <section id="featured-projects" class="section-padding bg-light-gray">
+        <div class="container">
+            <div class="section-header text-center mb-5" data-aos="fade-up">
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-subtitle">
+                    Flagship projects showcasing innovation and technical excellence
+                </p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="featured-project-card">
+                        <div class="project-content">
+                            <div class="project-category">EU Project • €4,825,924</div>
+                            <h3 class="project-title">ProcTwin (2025-2029)</h3>
+                            <p class="project-description">
+                                Integrated modelling for sustainable and optimized steel manufacturing processes. 
+                                ProcTwin develops a demonstration platform to predict and visualize best use of multiple 
+                                processing steps in a steel manufacturing chain using intelligent coupling of 
+                                interconnected processing steps through numerical simulation, soft sensors, and distributed machine learning.
+                            </p>
+                            <div class="project-tech mb-4">
+                                <span class="tech-tag">Distributed ML</span>
+                                <span class="tech-tag">Steel Manufacturing</span>
+                                <span class="tech-tag">Process Optimization</span>
+                                <span class="tech-tag">EU Project</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="https://www.estep.eu/clean-steel-partnership/proctwin/partners" class="btn btn-primary" target="_blank">
+                                    <i class="fas fa-external-link-alt me-2"></i>
+                                    Project Website
+                                </a>
+                                <a href="#" class="btn btn-outline-secondary">
+                                    <i class="fas fa-info-circle me-2"></i>
+                                    Learn More
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="featured-project-card">
+                        <div class="project-content">
+                            <div class="project-category">Federated Learning</div>
+                            <h3 class="project-title">Scalable Federated Machine Learning (2020-2022)</h3>
+                            <p class="project-description">
+                                FEDn is an open-source, modular and ML-framework agnostic framework for Federated Machine Learning (FedML) 
+                                developed by researchers from Uppsala university and Scaleout Systems. FEDn enables highly scalable 
+                                cross-silo and cross-device use-cases over FEDn networks, motivated by the need for AI on private data 
+                                and facilitating collaborative machine learning.
+                            </p>
+                            <div class="project-tech mb-4">
+                                <span class="tech-tag">Federated Learning</span>
+                                <span class="tech-tag">Open Source</span>
+                                <span class="tech-tag">ML Framework</span>
+                                <span class="tech-tag">Privacy</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="https://github.com/scaleoutsystems/fedn" class="btn btn-primary" target="_blank">
+                                    <i class="fab fa-github me-2"></i>
+                                    Source Code
+                                </a>
+                                <a href="https://ieeexplore.ieee.org/document/9826069" class="btn btn-outline-secondary" target="_blank">
+                                    <i class="fas fa-file-alt me-2"></i>
+                                    Publication
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Latest News Section -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-8 text-center" data-aos="fade-up">
+                    <h2 class="section-title mb-3">Latest News & Updates</h2>
+                    <p class="section-subtitle">Stay informed about recent developments, achievements, and announcements</p>
+                </div>
+            </div>
+            
+            <div class="row">
+                                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="news-card glass-card h-100">
+                        <div class="news-date">
+                            <div class="date-badge">
+                                <span class="day">9</span>
+                                <span class="month">June 2025</span>
+                            </div>
+                        </div>
+                        <div class="news-content">
+                            <div class="news-category">Conference</div>
+                            <h4 class="news-title">Federated Learning and Intelligent Computing Systems</h4>
+                            <p class="news-excerpt">
+                                Announcing the second edition of FLICS 2026 in Valencia, Spain. 
+                                Join leading researchers in Federated Learning and Privacy-Preserving AI.
+                            </p>
+                            <a href="https://intelligent-systems.net/flics2026/" class="news-link" target="_blank">
+                                Read More <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="news-card glass-card h-100">
+                        <div class="news-date">
+                            <div class="date-badge">
+                                <span class="day">08</span>
+                                <span class="month">Nov 2024</span>
+                            </div>
+                        </div>
+                        <div class="news-content">
+                            <div class="news-category">Research</div>
+                            <h4 class="news-title">PhD Position - ProcTwin Project</h4>
+                            <p class="news-excerpt">
+                                Recruiting PhD student for new research project focusing on cutting-edge 
+                                AI and Federated Learning solutions for digital twins.
+                            </p>
+                            <a href="https://proctwin.eu/" class="news-link" target="_blank">
+                                Read More <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="news-card glass-card h-100">
+                        <div class="news-date">
+                            <div class="date-badge">
+                                <span class="day">22</span>
+                                <span class="month">Oct 2024</span>
+                            </div>
+                        </div>
+                        <div class="news-content">
+                            <div class="news-category">Publication</div>
+                            <h4 class="news-title">Privacy-Preserving Research Published</h4>
+                            <p class="news-excerpt">
+                                Latest research on privacy-aware federated database infrastructure 
+                                accepted for publication in top-tier conference.
+                            </p>
+                            <a href="publications.html" class="news-link">
+                                Read More <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row mt-4">
+                <div class="col-12 text-center" data-aos="fade-up" data-aos-delay="400">
+                    <a href="news.html" class="btn btn-outline-primary btn-lg">
+                        <i class="fas fa-newspaper me-2"></i>
+                        View All News
+                    </a>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modern Footer -->
+    <footer class="modern-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="footer-section">
+                            <div class="footer-brand mb-4">
+                                <img src="img/personal/me-2.jpg" alt="Dr. Addi Ait-Mlouk" class="footer-logo me-2">
+                                <span class="footer-brand-text">Dr. Addi Ait-Mlouk</span>
+                            </div>
+                            <p class="footer-description">
+                                Advancing the frontiers of computer science and data analytics through 
+                                innovative research and academic excellence.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-6">
+                        <div class="footer-section">
+                            <h5 class="footer-title">Navigation</h5>
+                            <ul class="footer-links">
+                                <li><a href="home.html">Home</a></li>
+                                <li><a href="about.html">About</a></li>
+                                <li><a href="research.html">Research</a></li>
+                                <li><a href="publications.html">Publications</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-6">
+                        <div class="footer-section">
+                            <h5 class="footer-title">Academic</h5>
+                            <ul class="footer-links">
+                                <li><a href="projects.html">Projects</a></li>
+                                <li><a href="teaching.html">Teaching</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                                <li><a href="cv/cv_phd_aitmlouk.pdf">Download CV</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="footer-section">
+                            <h5 class="footer-title">Connect</h5>
+                            <div class="social-links">
+                                <a href="#" class="social-link" aria-label="LinkedIn">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                                <a href="#" class="social-link" aria-label="Google Scholar">
+                                    <i class="fas fa-graduation-cap"></i>
+                                </a>
+                                <a href="#" class="social-link" aria-label="ResearchGate">
+                                    <i class="fab fa-researchgate"></i>
+                                </a>
+                                <a href="#" class="social-link" aria-label="ORCID">
+                                    <i class="fab fa-orcid"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <p class="footer-copyright">
+                            © 2025 Dr. Addi Ait-Mlouk. All rights reserved.
+                        </p>
+                    </div>
+                    <div class="col-md-6 text-md-end">
+                        <div class="footer-links-bottom">
+                            <a href="#" class="footer-link-bottom">Privacy Policy</a>
+                            <a href="#" class="footer-link-bottom">Terms of Use</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Custom Scripts -->
+    <script src="js/modern-multipage.js"></script>
+    
+    <!-- Initialize Everything -->
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            easing: 'ease-out-quad',
+            once: true,
+            offset: 50
+        });
+    </script>
+</body>
+</html>

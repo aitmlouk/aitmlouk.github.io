@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- SEO Meta Tags -->
+    <title>Divers - Dr. Addi Ait-Mlouk</title>
+    <meta name="description" content="Discover Dr. Addi Ait-Mlouk's media appearances, awards, honors, community service, and other miscellaneous achievements.">
+    <meta name="keywords" content="Dr. Addi Ait-Mlouk, awards, honors, media, community service, hobbies, interests">
+    <meta name="author" content="Dr. Addi Ait-Mlouk">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="img/personal/me-2.jpg">
+    <link rel="apple-touch-icon" href="img/personal/me-2.jpg">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/portfolio-custom.css">
+    <link rel="stylesheet" href="css/modern-multipage.css">
+
+    <!-- Enhanced Theme Initialization Script -->
+    <script>
+        (function() {
+            try {
+                const savedTheme = localStorage.getItem('theme') || 'light';
+
+                function setThemeOnElement(element, theme) {
+                    if (element && typeof element.setAttribute === 'function') {
+                        element.setAttribute('data-theme', theme);
+                        return true;
+                    }
+                    return false;
+                }
+
+                setThemeOnElement(document.documentElement, savedTheme);
+
+                function initializeBodyTheme() {
+                    if (document.body) {
+                        setThemeOnElement(document.body, savedTheme);
+
+                        if (savedTheme === 'dark') {
+                            document.body.classList.add('dark-theme');
+                            document.documentElement.classList.add('dark-theme');
+                        } else {
+                            document.body.classList.add('light-theme');
+                            document.documentElement.classList.add('light-theme');
+                        }
+                    }
+                }
+
+                if (document.body) {
+                    initializeBodyTheme();
+                } else {
+                    if (document.readyState === 'loading') {
+                        document.addEventListener('DOMContentLoaded', initializeBodyTheme);
+                    } else {
+                        setTimeout(initializeBodyTheme, 0);
+                    }
+                    window.addEventListener('load', initializeBodyTheme);
+                }
+
+            } catch (error) {
+                console.error('Theme initialization error:', error);
+                if (document.documentElement) {
+                    document.documentElement.setAttribute('data-theme', 'light');
+                }
+            }
+        })();
+    </script>
+</head>
+
+<body class="modern-body">
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen modern-loading">
+        <div class="loading-content">
+            <div class="loading-spinner">
+                <div class="spinner-circle"></div>
+            </div>
+            <div class="loading-text">
+                <h3 class="brand-text">Loading...</h3>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modern Navigation with Glass Morphism -->
+    <nav id="main-navbar" class="navbar navbar-expand-lg fixed-top modern-nav glass-nav" data-aos="fade-down">
+        <div class="container-fluid px-4">
+            <a class="navbar-brand modern-brand" href="home.html">
+                <div class="brand-container">
+                    <img src="img/personal/me-2.jpg" alt="Dr. Addi Ait-Mlouk" class="brand-logo">
+                    <span class="brand-text"></span>
+                </div>
+            </a>
+            
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto modern-nav-list">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="home.html" data-page="home">
+                            <i class="fas fa-home nav-icon"></i>
+                            <span>Home</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html" data-page="about">
+                            <i class="fas fa-user nav-icon"></i>
+                            <span>About</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="research.html" data-page="research">
+                            <i class="fas fa-microscope nav-icon"></i>
+                            <span>Research</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="publications.html" data-page="publications">
+                            <i class="fas fa-file-alt nav-icon"></i>
+                            <span>Publications</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="projects.html" data-page="projects">
+                            <i class="fas fa-project-diagram nav-icon"></i>
+                            <span>Projects</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="teaching.html" data-page="teaching">
+                            <i class="fas fa-chalkboard-teacher nav-icon"></i>
+                            <span>Teaching</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="divers.html" data-page="divers">
+                            <i class="fas fa-th nav-icon"></i>
+                            <span>Divers</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html" data-page="contact">
+                            <i class="fas fa-envelope nav-icon"></i>
+                            <span>Contact</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <!-- Dark Mode Toggle -->
+                <div class="navbar-actions d-flex align-items-center">
+                    <button id="theme-toggle" class="btn btn-ghost btn-sm me-3" aria-label="Toggle theme">
+                        <i class="fas fa-sun theme-icon light-icon"></i>
+                        <i class="fas fa-moon theme-icon dark-icon"></i>
+                    </button>
+                    
+                    <button class="navbar-toggler modern-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                        <span class="toggler-line"></span>
+                        <span class="toggler-line"></span>
+                        <span class="toggler-line"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Recommended Resources Section -->
+    <section class="section-padding bg-light-gray">
+        <div class="container">
+            <div class="section-header text-center mb-5" data-aos="fade-up">
+                <h2 class="section-title">Recommended Resources</h2>
+                <p class="section-subtitle">
+                    Conferences and funding opportunities for researchers
+                </p>
+            </div>
+
+            <!-- Tabs Navigation -->
+            <div class="row justify-content-center mb-4" data-aos="fade-up">
+                <div class="col-lg-8">
+                    <ul class="nav nav-pills justify-content-center resource-tabs" id="resourceTabs" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="conferences-tab" data-bs-toggle="tab" data-bs-target="#conferences" type="button" role="tab">
+                                <i class="fas fa-calendar-alt me-2"></i>Conferences
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="funding-tab" data-bs-toggle="tab" data-bs-target="#funding" type="button" role="tab">
+                                <i class="fas fa-coins me-2"></i>Funding Agencies
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Tabs Content -->
+            <div class="tab-content" id="resourceTabsContent">
+                <!-- Recommended Conferences Tab -->
+                <div class="tab-pane fade show active" id="conferences" role="tabpanel">
+                    <div class="row g-4">
+                        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                            <div class="glass-card h-100">
+                                <div class="card-body p-4">
+                                    <h5 class="resource-category-title mb-4">
+                                        <i class="fas fa-brain me-2 text-primary"></i>
+                                        Data Science, ML & AI
+                                    </h5>
+                                    <ul class="resource-list">
+                                        <li>Neural Information Processing Systems (NeuroIPS)</li>
+                                        <li>International Conference on Machine Learning (ICML)</li>
+                                        <li>AAAI Conference on Artificial Intelligence (AAAI)</li>
+                                        <li>International Joint Conference on Artificial Intelligence (IJCAI)</li>
+                                        <li>European Conference on Machine Learning (ECML)</li>
+                                        <li>European Conference on Artificial Intelligence (ECAI)</li>
+                                        <li>Asian Conference on Machine Learning (ACML)</li>
+                                        <li>IEEE International Conference on Data Mining (ICDM)</li>
+                                        <li>IEEE International Conference on Machine Learning and Applications (ICMLA)</li>
+                                        <li>ACM International Conference on Information and Knowledge Management (CIKM)</li>
+                                        <li>Pacific-Asia Conference on Knowledge Discovery and Data Mining (PAKDD)</li>
+                                        <li>International Conference on Artificial Intelligence and Statistics (AISTATS)</li>
+                                        <li>Conference on Uncertainty in Artificial Intelligence (UAI)</li>
+                                        <li>International Joint Conference on Neural Networks (IJCNN)</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+                            <div class="glass-card h-100">
+                                <div class="card-body p-4">
+                                    <h5 class="resource-category-title mb-4">
+                                        <i class="fas fa-shield-alt me-2 text-primary"></i>
+                                        Distributed Systems & Security
+                                    </h5>
+                                    <ul class="resource-list">
+                                        <li>IEEE Symposium on Security and Privacy (S&P)</li>
+                                        <li>Network and Distributed System Security Symposium (NDSS)</li>
+                                        <li>ACM Conference on Computer and Communications Security (CCS)</li>
+                                        <li>IEEE International Conference on Computer Communications (INFOCOM)</li>
+                                        <li>European Conference on Computer Systems (EuroSys)</li>
+                                        <li>IEEE Global Communications Conference (GLOBECOM)</li>
+                                        <li>IEEE Conference on Communications and Network Security (CNS)</li>
+                                        <li>ACM Conference on Data and Application Security and Privacy (CODASPY)</li>
+                                        <li>IEEE European Symposium on Security and Privacy (EuroS&P)</li>
+                                        <li>IEEE Conference on Privacy, Security and Trust (PST)</li>
+                                        <li>International Conference on Availability, Reliability and Security (ARES)</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Funding Agencies Tab -->
+                <div class="tab-pane fade" id="funding" role="tabpanel">
+                    <div class="row g-4">
+                        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                            <div class="glass-card h-100">
+                                <div class="card-body p-4">
+                                    <h5 class="resource-category-title mb-4">
+                                        <i class="fas fa-flag me-2 text-primary"></i>
+                                        Swedish Funding Agencies
+                                    </h5>
+                                    <ul class="resource-list funding-links">
+                                        <li><a href="https://www.vr.se/english/applying-for-funding/calls-and-decisions.html" target="_blank" rel="noopener">Swedish Research Council (VR)</a></li>
+                                        <li><a href="https://strategiska.se/en/call-for-proposals/" target="_blank" rel="noopener">Swedish Foundation for Strategic Research (SSF)</a></li>
+                                        <li><a href="https://wasp-hs.org/calls/" target="_blank" rel="noopener">Wallenberg AI</a></li>
+                                        <li><a href="https://www.vinnova.se/en/apply-for-funding/find-the-right-funding/" target="_blank" rel="noopener">Vinnova</a></li>
+                                        <li><a href="https://www.kks.se/en/programmes-and-calls/" target="_blank" rel="noopener">Knowledge Foundation (KKS)</a></li>
+                                        <li><a href="https://formas.se/en/start-page/apply-for-funding/all-calls.html" target="_blank" rel="noopener">Formas</a></li>
+                                        <li><a href="https://forte.se/en/proposal" target="_blank" rel="noopener">Forte</a></li>
+                                        <li><a href="https://www.nordforsk.org/funding-opportunities" target="_blank" rel="noopener">NordForsk</a></li>
+                                        <li><a href="https://www.stint.se/en/our-programmes/" target="_blank" rel="noopener">STINT</a></li>
+                                        <li><a href="https://www.rj.se/en/funding-opportunities/" target="_blank" rel="noopener">Riksbankens Jubileumsfond (RJ)</a></li>
+                                        <li><a href="https://ragnar.soderbergs.se/anslagsguide/" target="_blank" rel="noopener">Ragnar Söderberg's Foundation</a></li>
+                                        <li><a href="https://www.erlingperssonsstiftelse.se/en/application-form" target="_blank" rel="noopener">Erling-Persson Foundation</a></li>
+                                        <li><a href="https://www.kempe.com/" target="_blank" rel="noopener">Kempe Foundations</a></li>
+                                        <li><a href="https://www.swgc.org/stipendier-och-anslag" target="_blank" rel="noopener">Wenner-Gren Foundation</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+                            <div class="glass-card h-100">
+                                <div class="card-body p-4">
+                                    <h5 class="resource-category-title mb-4">
+                                        <i class="fas fa-flag me-2 text-primary"></i>
+                                        EU Funding
+                                    </h5>
+                                    <ul class="resource-list funding-links">
+                                        <li><a href="https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/calls-for-proposals?isExactMatch=true&status=31094501,31094502,31094503&order=DESC&pageNumber=1&pageSize=50&sortBy=startDate" target="_blank" rel="noopener">EU Funding & Tenders Portal</a></li>
+                                        <li><a href="https://erc.europa.eu/apply-grant" target="_blank" rel="noopener">European Research Council (ERC)</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community Service Section -->
+    <section class="section-padding bg-light-gray">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="section-header text-center mb-5" data-aos="fade-up">
+                        <h2 class="section-title">
+                            <i class="fas fa-hands-helping me-3"></i>
+                            Community Service
+                        </h2>
+                        <p class="section-subtitle">
+                            Contributing to the academic community and society
+                        </p>
+                    </div>
+
+                    <div class="row g-4">
+                        <!-- Service 1 -->
+                        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                            <div class="glass-card h-100">
+                                <div class="card-body p-4">
+                                    <div class="service-icon mb-3">
+                                        <i class="fas fa-user-check"></i>
+                                    </div>
+                                    <h4 class="card-title mb-3">Academic Reviewer</h4>
+                                    <p class="card-text mb-3">
+                                        Active reviewer for prestigious conferences and journals including ICDM, ECIR,
+                                        ECML-PKDD, and numerous AI and data science publications, contributing to
+                                        maintaining high research standards in the field.
+                                    </p>
+                                    <div class="service-tags">
+                                        <span class="badge bg-secondary me-2">ICDM</span>
+                                        <span class="badge bg-secondary me-2">ECIR</span>
+                                        <span class="badge bg-secondary">ECML-PKDD</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Service 2 -->
+                        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+                            <div class="glass-card h-100">
+                                <div class="card-body p-4">
+                                    <div class="service-icon mb-3">
+                                        <i class="fas fa-users"></i>
+                                    </div>
+                                    <h4 class="card-title mb-3">Conference Organization</h4>
+                                    <p class="card-text mb-3">
+                                        Active participation in organizing international conferences and workshops in AI,
+                                        machine learning, and data science. Serving as program committee member, reviewer,
+                                        and session chair to foster collaboration and advance research in the field.
+                                    </p>
+                                    <div class="service-tags">
+                                        <span class="badge bg-secondary me-2">Program Committee</span>
+                                        <span class="badge bg-secondary me-2">Reviewer</span>
+                                        <span class="badge bg-secondary">Session Chair</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Service 3 -->
+                        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+                            <div class="glass-card h-100">
+                                <div class="card-body p-4">
+                                    <div class="service-icon mb-3">
+                                        <i class="fas fa-chalkboard-teacher"></i>
+                                    </div>
+                                    <h4 class="card-title mb-3">Mentorship & Supervision</h4>
+                                    <p class="card-text mb-3">
+                                        Dedicated mentor to graduate students and early-career researchers, providing
+                                        guidance on research methodologies, career development, and fostering the next
+                                        generation of AI and data science professionals.
+                                    </p>
+                                    <div class="service-tags">
+                                        <span class="badge bg-secondary me-2">PhD Supervision</span>
+                                        <span class="badge bg-secondary">Career Guidance</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Service 4 -->
+                        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
+                            <div class="glass-card h-100">
+                                <div class="card-body p-4">
+                                    <div class="service-icon mb-3">
+                                        <i class="fas fa-handshake"></i>
+                                    </div>
+                                    <h4 class="card-title mb-3">Industry Consultation</h4>
+                                    <p class="card-text mb-3">
+                                        Providing expert consultation to businesses on CRM, ERP, Data Science, and AI
+                                        implementations, helping organizations drive digital transformation and leverage
+                                        data-driven decision making.
+                                    </p>
+                                    <div class="service-tags">
+                                        <span class="badge bg-secondary me-2">Consulting</span>
+                                        <span class="badge bg-secondary">Training</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="modern-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="footer-section">
+                            <div class="footer-brand mb-4">
+                                <img src="img/personal/me-2.jpg" alt="Dr. Addi Ait-Mlouk" class="footer-logo me-2">
+                                <span class="footer-brand-text">Dr. Addi Ait-Mlouk</span>
+                            </div>
+                            <p class="footer-description">
+                                Advancing the frontiers of computer science and data analytics through
+                                innovative research and academic excellence.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-6">
+                        <div class="footer-section">
+                            <h5 class="footer-title">Navigation</h5>
+                            <ul class="footer-links">
+                                <li><a href="home.html">Home</a></li>
+                                <li><a href="about.html">About</a></li>
+                                <li><a href="research.html">Research</a></li>
+                                <li><a href="publications.html">Publications</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-6">
+                        <div class="footer-section">
+                            <h5 class="footer-title">Academic</h5>
+                            <ul class="footer-links">
+                                <li><a href="projects.html">Projects</a></li>
+                                <li><a href="teaching.html">Teaching</a></li>
+                                <li><a href="divers.html">Divers</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="footer-section">
+                            <h5 class="footer-title">Connect</h5>
+                            <div class="social-links">
+                                <a href="#" class="social-link" aria-label="LinkedIn">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                                <a href="#" class="social-link" aria-label="Google Scholar">
+                                    <i class="fas fa-graduation-cap"></i>
+                                </a>
+                                <a href="#" class="social-link" aria-label="ResearchGate">
+                                    <i class="fab fa-researchgate"></i>
+                                </a>
+                                <a href="#" class="social-link" aria-label="ORCID">
+                                    <i class="fab fa-orcid"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <p class="footer-copyright">
+                            © 2025 Dr. Addi Ait-Mlouk. All rights reserved.
+                        </p>
+                    </div>
+                    <div class="col-md-6 text-md-end">
+                        <div class="footer-links-bottom">
+                            <a href="#" class="footer-link-bottom">Privacy Policy</a>
+                            <a href="#" class="footer-link-bottom">Terms of Use</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/modern-multipage.js"></script>
+
+    <!-- Initialize AOS -->
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-out-quad',
+            once: true,
+            offset: 50
+        });
+    </script>
+
+    <!-- Custom styles for Divers page -->
+    <style>
+        .media-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        .award-badge {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+            margin: 0 auto;
+        }
+
+        .service-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            border-radius: 12px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.75rem;
+        }
+
+        .hobby-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+            margin: 0 auto;
+        }
+
+        .misc-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2.5rem;
+            margin: 0 auto;
+        }
+
+        .hobby-card:hover,
+        .award-item:hover {
+            transform: translateY(-5px);
+            transition: transform 0.3s ease;
+        }
+    </style>
+</body>
+</html>

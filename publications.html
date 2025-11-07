@@ -1,0 +1,1035 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <!-- SEO Meta Tags -->
+    <title>Publications - Dr. Addi Ait-Mlouk | Academic Portfolio</title>
+    <meta name="description" content="Explore Dr. Addi Ait-Mlouk's extensive publication record in machine learning, data analytics, and computational intelligence research.">
+    <meta name="keywords" content="Dr. Addi Ait-Mlouk, publications, research papers, machine learning, data analytics, journals, conferences">
+    <meta name="author" content="Dr. Addi Ait-Mlouk">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Publications - Dr. Addi Ait-Mlouk | Academic Portfolio">
+    <meta property="og:description" content="Comprehensive list of academic publications and research contributions.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://addiait-mlouk.github.io/publications.html">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Publications - Dr. Addi Ait-Mlouk">
+    <meta name="twitter:description" content="Academic publications and research contributions.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="img/personal/me-2.jpg">
+    <link rel="apple-touch-icon" href="img/personal/me-2.jpg">
+    
+    <!-- Preload Critical Resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" as="style">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/portfolio-custom.css">
+    <link rel="stylesheet" href="css/modern-multipage.css">
+    
+    <!-- Enhanced Theme Initialization Script -->
+    <script>
+        (function() {
+            try {
+                const savedTheme = localStorage.getItem('theme') || 'light';
+                console.log('Initializing theme:', savedTheme);
+                
+                // Robust DOM element checking and setting
+                function setThemeOnElement(element, theme) {
+                    if (element && typeof element.setAttribute === 'function') {
+                        element.setAttribute('data-theme', theme);
+                        return true;
+                    }
+                    return false;
+                }
+                
+                // Set theme on document element immediately
+                setThemeOnElement(document.documentElement, savedTheme);
+                
+                // Handle body element
+                function initializeBodyTheme() {
+                    if (document.body) {
+                        setThemeOnElement(document.body, savedTheme);
+                        
+                        // Add class-based styling for immediate effect
+                        if (savedTheme === 'dark') {
+                            document.body.classList.add('dark-theme');
+                            document.documentElement.classList.add('dark-theme');
+                        } else {
+                            document.body.classList.add('light-theme');
+                            document.documentElement.classList.add('light-theme');
+                        }
+                    }
+                }
+                
+                // Initialize immediately if body exists, otherwise wait
+                if (document.body) {
+                    initializeBodyTheme();
+                } else {
+                    // Multiple fallback approaches
+                    if (document.readyState === 'loading') {
+                        document.addEventListener('DOMContentLoaded', initializeBodyTheme);
+                    } else {
+                        // DOM is already ready
+                        setTimeout(initializeBodyTheme, 0);
+                    }
+                    
+                    // Additional fallback
+                    window.addEventListener('load', initializeBodyTheme);
+                }
+                
+            } catch (error) {
+                console.error('Theme initialization error:', error);
+                // Fallback: set light theme
+                if (document.documentElement) {
+                    document.documentElement.setAttribute('data-theme', 'light');
+                }
+            }
+        })();
+    </script>
+</head>
+
+<body class="modern-body">
+    <!-- Loading Screen with Modern Design -->
+    <div id="loading-screen" class="loading-screen modern-loading">
+        <div class="loading-content">
+            <div class="loading-spinner">
+                <div class="spinner-circle"></div>
+            </div>
+            <div class="loading-text">
+                <h3 class="brand-text">Loading...</h3>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modern Navigation with Glass Morphism -->
+    <nav id="main-navbar" class="navbar navbar-expand-lg fixed-top modern-nav glass-nav" data-aos="fade-down">
+        <div class="container-fluid px-4">
+            <a class="navbar-brand modern-brand" href="home.html">
+                <div class="brand-container">
+                    <img src="img/personal/me-2.jpg" alt="Dr. Addi Ait-Mlouk" class="brand-logo">
+                    <span class="brand-text"></span>
+                </div>
+            </a>
+            
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto modern-nav-list">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="home.html" data-page="home">
+                            <i class="fas fa-home nav-icon"></i>
+                            <span>Home</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html" data-page="about">
+                            <i class="fas fa-user nav-icon"></i>
+                            <span>About</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="research.html" data-page="research">
+                            <i class="fas fa-microscope nav-icon"></i>
+                            <span>Research</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="publications.html" data-page="publications">
+                            <i class="fas fa-file-alt nav-icon"></i>
+                            <span>Publications</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="projects.html" data-page="projects">
+                            <i class="fas fa-project-diagram nav-icon"></i>
+                            <span>Projects</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="teaching.html" data-page="teaching">
+                            <i class="fas fa-chalkboard-teacher nav-icon"></i>
+                            <span>Teaching</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="divers.html" data-page="divers">
+                            <i class="fas fa-th nav-icon"></i>
+                            <span>Divers</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html" data-page="contact">
+                            <i class="fas fa-envelope nav-icon"></i>
+                            <span>Contact</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <!-- Dark Mode Toggle -->
+                <div class="navbar-actions d-flex align-items-center">
+                    <button id="theme-toggle" class="btn btn-ghost btn-sm me-3" aria-label="Toggle theme">
+                        <i class="fas fa-sun theme-icon light-icon"></i>
+                        <i class="fas fa-moon theme-icon dark-icon"></i>
+                    </button>
+                    
+                    <button class="navbar-toggler modern-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                        <span class="toggler-line"></span>
+                        <span class="toggler-line"></span>
+                        <span class="toggler-line"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Search and Filter Section -->
+    <section class="section-padding bg-light-gray">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-8">
+                    <div class="search-filter-container" data-aos="fade-up">
+                        <div class="academic-search mb-4">
+                            <input type="text" id="publicationSearch" placeholder="Search publications by title, authors, keywords...">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        
+                        <div class="filter-tabs">
+                            <button class="filter-tab active" data-filter="all">
+                                <i class="fas fa-list"></i>
+                                All Publications (50+)
+                            </button>
+                            <button class="filter-tab" data-filter="journal">
+                                <i class="fas fa-journal-whills"></i>
+                                Journal Articles (20+)
+                            </button>
+                            <button class="filter-tab" data-filter="conference">
+                                <i class="fas fa-users"></i>
+                                Conference Papers (25+)
+                            </button>
+                            <button class="filter-tab" data-filter="thesis">
+                                <i class="fas fa-graduation-cap"></i>
+                                Thesis (1)
+                            </button>
+                            <button class="filter-tab" data-filter="chapter">
+                                <i class="fas fa-book"></i>
+                                Book Chapters (1)
+                            </button>
+                        </div>
+
+                        <!-- Academic Profile Links -->
+                        <div class="academic-links mt-4" data-aos="fade-up">
+                            <a href="https://scholar.google.com/citations?user=nvgiplcAAAAJ&hl=en" target="_blank" rel="noopener" class="btn btn-outline-primary me-3">
+                                <i class="fas fa-graduation-cap me-2"></i>
+                                Google Scholar
+                            </a>
+                            <a href="https://www.researchgate.net/profile/Addi-Ait-Mlouk" target="_blank" rel="noopener" class="btn btn-outline-primary">
+                                <i class="fab fa-researchgate me-2"></i>
+                                ResearchGate
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Publications List Section -->
+    <section id="publications-list" class="section-padding">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="publications-container">
+
+                        <!-- 2025 Publications -->
+                        <div class="year-section" data-aos="fade-up">
+                            <h3 class="year-title">2025</h3>
+                            <div class="publications-list">
+
+                                <div class="publication-item journal" data-aos="fade-up" data-aos-delay="50">
+                                    <div class="pub-header">
+                                        <span class="pub-type"><i class="fas fa-journal-whills"></i> Journal</span>
+                                        <a href="https://doi.org/10.1007/s10845-023-02243-9" target="_blank" rel="noopener" class="pub-link" title="View Paper"><i class="fas fa-external-link-alt"></i></a>
+                                    </div>
+                                    <h5 class="pub-title">Investigation on eXtreme Gradient Boosting for cutting force prediction in milling</h5>
+                                    <p class="pub-authors">Thomas Heitz, Ning He, <strong>Addi Ait-Mlouk</strong>, Daniel Bachrathy, Ni Chen, Guolong Zhao, Liang Li</p>
+                                    <p class="pub-venue">Journal of Intelligent Manufacturing 2025</p>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- 2024 Publications -->
+                        <div class="year-section" data-aos="fade-up">
+                            <h3 class="year-title">2024</h3>
+                            <div class="publications-list">
+
+                                <div class="publication-item conference" data-aos="fade-up" data-aos-delay="50">
+                                    <div class="pub-header">
+                                        <span class="pub-type"><i class="fas fa-users"></i> Conference</span>
+                                        <a href="https://doi.org/10.1109/FLTA63145.2024.10840066" target="_blank" rel="noopener" class="pub-link" title="View Paper"><i class="fas fa-external-link-alt"></i></a>
+                                    </div>
+                                    <h5 class="pub-title">Bridging AI and Privacy: Federated Learning for Leukemia Diagnosis</h5>
+                                    <p class="pub-authors">C. Lhasnaoui, <strong>Addi Ait-Mlouk</strong>, T. Agouti and M. Sadgal</p>
+                                    <p class="pub-venue">2024 2nd International Conference on Federated Learning Technologies and Applications (FLTA), Valencia, Spain</p>
+                                </div>
+
+                                <div class="publication-item conference" data-aos="fade-up" data-aos-delay="100">
+                                    <div class="pub-header">
+                                        <span class="pub-type"><i class="fas fa-users"></i> Conference</span>
+                                        <a href="#" target="_blank" rel="noopener" class="pub-link" title="View Paper"><i class="fas fa-external-link-alt"></i></a>
+                                    </div>
+                                    <h5 class="pub-title">Decentralized Diagnosis: Privacy-Preserving Brain Tumor Classification with Federated Learning</h5>
+                                    <p class="pub-authors">Chaima Lhasnaoui, <strong>Addi Ait-Mlouk</strong>, Tarik Agouti, Mohammed Sadgal</p>
+                                    <p class="pub-venue">KDD 2024 Workshop - Artificial Intelligence and Data Science for Healthcare, Barcelona, Spain</p>
+                                </div>
+
+                                <div class="publication-item journal" data-aos="fade-up" data-aos-delay="150">
+                                    <div class="pub-header">
+                                        <span class="pub-type"><i class="fas fa-journal-whills"></i> Journal</span>
+                                        <a href="https://doi.org/10.1007/s13748-024-00322-3" target="_blank" rel="noopener" class="pub-link" title="View Paper"><i class="fas fa-external-link-alt"></i></a>
+                                    </div>
+                                    <h5 class="pub-title">Toward efficient resource utilization at edge nodes in federated learning</h5>
+                                    <p class="pub-authors">Sadi Alawadi, <strong>Addi Ait-Mlouk</strong>, Salman Toor, Andreas Hellander</p>
+                                    <p class="pub-venue">Progress in Artificial Intelligence 2024</p>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- 2022 Publications -->
+                        <div class="year-section" data-aos="fade-up">
+                            <h3 class="year-title">2022</h3>
+                            <div class="publications-list">
+
+                                <div class="publication-item journal" data-aos="fade-up" data-aos-delay="50">
+                                    <div class="pub-header">
+                                        <span class="pub-type"><i class="fas fa-journal-whills"></i> Journal</span>
+                                        <a href="https://doi.org/10.3390/app12063130" target="_blank" rel="noopener" class="pub-link" title="View Paper"><i class="fas fa-external-link-alt"></i></a>
+                                    </div>
+                                    <h5 class="pub-title">FedQAS: Privacy-Aware Machine Reading Comprehension with Federated Learning</h5>
+                                    <p class="pub-authors"><strong>Addi Ait-Mlouk</strong>, Sadi A. Alawadi, Salman Toor, Andreas Hellander</p>
+                                    <p class="pub-venue">Applied Sciences 2022, 12, 3130</p>
+                                </div>
+
+                                <div class="publication-item journal" data-aos="fade-up" data-aos-delay="100">
+                                    <div class="pub-header">
+                                        <span class="pub-type"><i class="fas fa-journal-whills"></i> Journal</span>
+                                        <a href="#" target="_blank" rel="noopener" class="pub-link" title="View Paper"><i class="fas fa-external-link-alt"></i></a>
+                                    </div>
+                                    <h5 class="pub-title">Arabic Named Entity Recognition on Social Media based on BiLSTM-CRF using an attention mechanism</h5>
+                                    <p class="pub-authors">Brahim Ait Ben Ali, <strong>Addi Ait-Mlouk</strong>, Soukaina Mihi, Ismail El Bazi, Nabil Laachfoubi</p>
+                                    <p class="pub-venue">Journal of Intelligent and Fuzzy Systems (JIFS) 2022</p>
+                                </div>
+
+                                <div class="publication-item conference" data-aos="fade-up" data-aos-delay="150">
+                                    <div class="pub-header">
+                                        <span class="pub-type"><i class="fas fa-users"></i> Conference</span>
+                                        <a href="#" target="_blank" rel="noopener" class="pub-link" title="View Paper"><i class="fas fa-external-link-alt"></i></a>
+                                    </div>
+                                    <h5 class="pub-title">Scalable federated machine learning with FEDn</h5>
+                                    <p class="pub-authors">Morgan Ekmefjord, <strong>Addi Ait-Mlouk</strong>, Sadi Alawadi, Mattias Åkesson, Desislava Stoyanova, Ola Spjuth, Salman Toor and Andreas Hellander</p>
+                                    <p class="pub-venue">2022 IEEE/ACM 22nd International Symposium on Cluster, Cloud and Internet Computing (CCGrid), pp. 21-30 [Rank: A]</p>
+                                </div>
+
+                                <div class="publication-item chapter" data-aos="fade-up" data-aos-delay="200">
+                                    <div class="pub-header">
+                                        <span class="pub-type chapter-type"><i class="fas fa-book"></i> Book Chapter</span>
+                                        <a href="https://doi.org/10.1007/978-3-030-90618-4_17" target="_blank" rel="noopener" class="pub-link" title="View Paper"><i class="fas fa-external-link-alt"></i></a>
+                                    </div>
+                                    <h5 class="pub-title">Fuzzy Set Theory-Based Approach for Mining Spatial Association Rules: Road Accident as a Case Study</h5>
+                                    <p class="pub-authors"><strong>Addi Ait-Mlouk</strong>, Ait-Mlouk M., El Mazouri FZ., Dey A., Agouti T.</p>
+                                    <p class="pub-venue">AI and IoT for Sustainable Development in Emerging Countries. Lecture Notes on Data Engineering and Communications Technologies, vol 105. Springer</p>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- 2021 Publications -->
+                        <div class="year-section" data-aos="fade-up">
+                            <h3 class="year-title">2021</h3>
+                            <div class="publications-list">
+
+                                <div class="publication-item journal" data-aos="fade-up" data-aos-delay="50">
+                                    <div class="pub-header">
+                                        <span class="pub-type"><i class="fas fa-journal-whills"></i> Journal</span>
+                                        <a href="https://arxiv.org/abs/2103.00148" target="_blank" rel="noopener" class="pub-link" title="View Paper"><i class="fas fa-external-link-alt"></i></a>
+                                    </div>
+                                    <h5 class="pub-title">Scalable federated machine learning with FEDn</h5>
+                                    <p class="pub-authors">Morgan Ekmefjord, <strong>Addi Ait-Mlouk</strong>, Sadi Alawadi, Mattias Åkesson, Desislava Stoyanova, Ola Spjuth, Salman Toor and Andreas Hellander</p>
+                                    <p class="pub-venue">arXiv 2021</p>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- 2020 Publications -->
+                        <div class="year-section" data-aos="fade-up">
+                            <h3 class="year-title">2020</h3>
+                            <div class="publications-list">
+
+                                <div class="publication-item journal" data-aos="fade-up" data-aos-delay="50">
+                                    <div class="pub-header">
+                                        <span class="pub-type"><i class="fas fa-journal-whills"></i> Journal</span>
+                                        <a href="https://www.mdpi.com/2227-7390/8/11/2090" target="_blank" rel="noopener" class="pub-link" title="View Paper"><i class="fas fa-external-link-alt"></i></a>
+                                    </div>
+                                    <h5 class="pub-title">WINFRA: A Web-Based Platform for Semantic Data Retrieval and Data Analytics</h5>
+                                    <p class="pub-authors"><strong>Addi Ait-Mlouk</strong>, Vu, X.-S., Jiang, L.</p>
+                                    <p class="pub-venue">Mathematics 2020, https://doi.org/10.3390/math8112090</p>
+                                </div>
+
+                                <div class="publication-item journal" data-aos="fade-up" data-aos-delay="100">
+                                    <div class="pub-header">
+                                        <span class="pub-type"><i class="fas fa-journal-whills"></i> Journal</span>
+                                        <a href="https://ieeexplore.ieee.org/document/9165716" target="_blank" rel="noopener" class="pub-link" title="View Paper"><i class="fas fa-external-link-alt"></i></a>
+                                    </div>
+                                    <h5 class="pub-title">kbot: a knowledge graph based chatbot for natural language understanding over linked data</h5>
+                                    <p class="pub-authors"><strong>Addi Ait-Mlouk</strong>, Lili Jiang</p>
+                                    <p class="pub-venue">IEEE Access, vol. 8, pp. 149220-149230, 2020, doi: 10.1109/ACCESS.2020.3016142</p>
+                                </div>
+
+                                <div class="publication-item conference" data-aos="fade-up" data-aos-delay="150">
+                                    <div class="pub-header">
+                                        <span class="pub-type"><i class="fas fa-users"></i> Conference</span>
+                                        <a href="https://link.springer.com/chapter/10.1007/978-3-030-45442-5_55" target="_blank" rel="noopener" class="pub-link" title="View Paper"><i class="fas fa-external-link-alt"></i></a>
+                                    </div>
+                                    <h5 class="pub-title">A Web-based Platform for Mining and Ranking Association Rules</h5>
+                                    <p class="pub-authors"><strong>Addi Ait-Mlouk</strong>, Lili Jiang</p>
+                                    <p class="pub-venue">ECIR The 42st European Conference on Information Retrieval, April 14-17, 2020, Lisbon, Spain</p>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- 2019 Publications -->
+                        <div class="year-section" data-aos="fade-up">
+                            <h3 class="year-title">2019</h3>
+                            <div class="publications-list">
+
+                                <div class="publication-item journal" data-aos="fade-up" data-aos-delay="50">
+                                    <div class="pub-header">
+                                        <span class="pub-type"><i class="fas fa-journal-whills"></i> Journal</span>
+                                        <a href="https://www.sciencedirect.com/science/article/pii/S2352711019301438" target="_blank" rel="noopener" class="pub-link" title="View Paper"><i class="fas fa-external-link-alt"></i></a>
+                                    </div>
+                                    <h5 class="pub-title">DM-MCDA: A web-based platform for data mining and multiple criteria decision analysis: A case study on road accident</h5>
+                                    <p class="pub-authors"><strong>Addi Ait-Mlouk</strong> and T. Agouti</p>
+                                    <p class="pub-venue">SoftwareX (2019) 100323, https://doi.org/10.1016/j.softx.2019.100323</p>
+                                </div>
+
+                                <div class="publication-item conference" data-aos="fade-up" data-aos-delay="100">
+                                    <div class="pub-header">
+                                        <span class="pub-type"><i class="fas fa-users"></i> Conference</span>
+                                        <a href="https://dl.acm.org/doi/10.1145/3308558.3314138" target="_blank" rel="noopener" class="pub-link" title="View Paper"><i class="fas fa-external-link-alt"></i></a>
+                                    </div>
+                                    <h5 class="pub-title">Graph-based Interactive Data Federation System for Heterogeneous Data Retrieval and Analytics</h5>
+                                    <p class="pub-authors">Xuan-Son Vu, <strong>Addi Ait-Mlouk</strong>, Erik Elmroth, Lili Jiang</p>
+                                    <p class="pub-venue">The 30th TheWebConf'19 (formerly WWW), May 13-17, 2019. San Francisco, California, U.S.</p>
+                                </div>
+
+                                <div class="publication-item conference" data-aos="fade-up" data-aos-delay="150">
+                                    <div class="pub-header">
+                                        <span class="pub-type"><i class="fas fa-users"></i> Conference</span>
+                                        <a href="https://sais2019.cs.umu.se/wp-content/uploads/2019/06/SAIS_2019_paper_21.pdf" target="_blank" rel="noopener" class="pub-link" title="View Paper"><i class="fas fa-external-link-alt"></i></a>
+                                    </div>
+                                    <h5 class="pub-title">Improving RDF data through semantic association rules mining</h5>
+                                    <p class="pub-authors"><strong>Addi Ait-Mlouk</strong>, Xuan-Son Vu, Erik Elmroth, Lili Jiang</p>
+                                    <p class="pub-venue">The 31st annual workshop of the Swedish Artificial Intelligence Society (SAIS 2019), June 18-19, Umeå, Sweden</p>
+                                </div>
+
+                                <div class="publication-item conference" data-aos="fade-up" data-aos-delay="200">
+                                    <div class="pub-header">
+                                        <span class="pub-type"><i class="fas fa-users"></i> Conference</span>
+                                        <a href="#" target="_blank" rel="noopener" class="pub-link" title="View Paper"><i class="fas fa-external-link-alt"></i></a>
+                                    </div>
+                                    <h5 class="pub-title">Privacy-concerns in the Era of AI and Social Network Sites</h5>
+                                    <p class="pub-authors">Xuan-Son Vu, <strong>Addi Ait-Mlouk</strong>, Erik Elmroth, Lili Jiang</p>
+                                    <p class="pub-venue">The 31st annual workshop of the Swedish Artificial Intelligence Society (SAIS 2019), June 18-19, Umeå, Sweden</p>
+                                </div>
+
+                                <div class="publication-item conference" data-aos="fade-up" data-aos-delay="250">
+                                    <div class="pub-header">
+                                        <span class="pub-type"><i class="fas fa-users"></i> Conference</span>
+                                        <a href="#" target="_blank" rel="noopener" class="pub-link" title="View Paper"><i class="fas fa-external-link-alt"></i></a>
+                                    </div>
+                                    <h5 class="pub-title">Privacy-aware Data Federation Infrastructure</h5>
+                                    <p class="pub-authors">Lili Jiang, Xuan-Son Vu, <strong>Addi Ait-Mlouk</strong>, Anders Brändström and Erik Elmroth</p>
+                                    <p class="pub-venue">The 31st annual workshop of the Swedish Artificial Intelligence Society (SAIS 2019), June 18-19, Umeå, Sweden</p>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- 2018 Publications -->
+                        <div class="year-section" data-aos="fade-up">
+                            <h3 class="year-title">2018</h3>
+                            <div class="publications-list">
+
+                                <div class="publication-item thesis" data-aos="fade-up" data-aos-delay="50">
+                                    <div class="pub-header">
+                                        <span class="pub-type thesis-type"><i class="fas fa-graduation-cap"></i> PhD Thesis</span>
+                                        <a href="https://hal.archives-ouvertes.fr/tel-02611898" target="_blank" rel="noopener" class="pub-link" title="View Thesis"><i class="fas fa-external-link-alt"></i></a>
+                                    </div>
+                                    <h5 class="pub-title">Fouille de données et analyse de qualité des règles d'association dans les bases de données massives : Application dans le domaine de la sécurité routière</h5>
+                                    <p class="pub-authors"><strong>Addi Ait-Mlouk</strong></p>
+                                    <p class="pub-venue">HAL, 2018</p>
+                                </div>
+
+                                <div class="publication-item journal" data-aos="fade-up" data-aos-delay="100">
+                                    <div class="pub-header">
+                                        <span class="pub-type"><i class="fas fa-journal-whills"></i> Journal</span>
+                                        <a href="https://onlinelibrary.wiley.com/doi/abs/10.1002/dac.3587" target="_blank" rel="noopener" class="pub-link" title="View Paper"><i class="fas fa-external-link-alt"></i></a>
+                                    </div>
+                                    <h5 class="pub-title">Stable routing protocol based on fuzzy logic system in vehicular ad hoc networks</h5>
+                                    <p class="pub-authors">Marzak B, <strong>Addi Ait-Mlouk</strong>, El Moumni S, Benlahmar E, Talea M.</p>
+                                    <p class="pub-venue">Int J Commun Syst., 2018</p>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- 2017 Publications -->
+                        <div class="year-section" data-aos="fade-up">
+                            <h3 class="year-title">2017</h3>
+                            <div class="publications-list">
+
+                                <div class="publication-item journal" data-aos="fade-up" data-aos-delay="50">
+                                    <div class="pub-header">
+                                        <span class="pub-type"><i class="fas fa-journal-whills"></i> Journal</span>
+                                        <a href="https://etrr.springeropen.com/articles/10.1007/s12544-017-0257-5" target="_blank" rel="noopener" class="pub-link" title="View Paper"><i class="fas fa-external-link-alt"></i></a>
+                                    </div>
+                                    <h5 class="pub-title">An improved approach for association rules mining using multi-criteria decision support system: A case study in road safety</h5>
+                                    <p class="pub-authors"><strong>Addi Ait-Mlouk</strong>, Gharnati, F., Agouti, T.</p>
+                                    <p class="pub-venue">European Transport Research Review, 2017</p>
+                                </div>
+
+                                <div class="publication-item journal" data-aos="fade-up" data-aos-delay="100">
+                                    <div class="pub-header">
+                                        <span class="pub-type"><i class="fas fa-journal-whills"></i> Journal</span>
+                                        <a href="https://journalofbigdata.springeropen.com/articles/10.1186/s40537-017-0105-4" target="_blank" rel="noopener" class="pub-link" title="View Paper"><i class="fas fa-external-link-alt"></i></a>
+                                    </div>
+                                    <h5 class="pub-title">Mining and prioritization of association rules for Big Data: Multi-criteria decision analysis approach</h5>
+                                    <p class="pub-authors"><strong>Addi Ait-Mlouk</strong>, Gharnati, F., Agouti, T.</p>
+                                    <p class="pub-venue">Journal of Big Data, 2017</p>
+                                </div>
+
+                                <div class="publication-item journal" data-aos="fade-up" data-aos-delay="150">
+                                    <div class="pub-header">
+                                        <span class="pub-type"><i class="fas fa-journal-whills"></i> Journal</span>
+                                        <a href="https://dl.acm.org/doi/10.5555/3160607.3160610" target="_blank" rel="noopener" class="pub-link" title="View Paper"><i class="fas fa-external-link-alt"></i></a>
+                                    </div>
+                                    <h5 class="pub-title">Multi-criteria decisional approach for extracting relevant association rules</h5>
+                                    <p class="pub-authors"><strong>Addi Ait-Mlouk</strong>, Gharnati, F., Agouti, T.</p>
+                                    <p class="pub-venue">Int. J. of Computational Science and Engineering, 2017</p>
+                                </div>
+
+                                <div class="publication-item journal" data-aos="fade-up" data-aos-delay="200">
+                                    <div class="pub-header">
+                                        <span class="pub-type"><i class="fas fa-journal-whills"></i> Journal</span>
+                                        <a href="#" target="_blank" rel="noopener" class="pub-link" title="View Paper"><i class="fas fa-external-link-alt"></i></a>
+                                    </div>
+                                    <h5 class="pub-title">Application of big data analysis with decision Tree for road accident</h5>
+                                    <p class="pub-authors"><strong>Addi Ait-Mlouk</strong>, Gharnati, F., Agouti, T.</p>
+                                    <p class="pub-venue">Indian Journal of Science and Technology, Vol. 10, No. 29, pp. 1-10, DOI: 10.17485/ijst/2017/v10i29/117325</p>
+                                </div>
+
+                                <div class="publication-item journal" data-aos="fade-up" data-aos-delay="250">
+                                    <div class="pub-header">
+                                        <span class="pub-type"><i class="fas fa-journal-whills"></i> Journal</span>
+                                        <a href="#" target="_blank" rel="noopener" class="pub-link" title="View Paper"><i class="fas fa-external-link-alt"></i></a>
+                                    </div>
+                                    <h5 class="pub-title">Intelligent transport system for road safety based data mining approach</h5>
+                                    <p class="pub-authors"><strong>Addi Ait-Mlouk</strong>, Kamsa, I., Gharnati, F., Agouti, T.</p>
+                                    <p class="pub-venue">International Journal of Control and Automation, Vol.10, No.8, pp.13-22</p>
+                                </div>
+
+                                <div class="publication-item journal" data-aos="fade-up" data-aos-delay="300">
+                                    <div class="pub-header">
+                                        <span class="pub-type"><i class="fas fa-journal-whills"></i> Journal</span>
+                                        <a href="#" target="_blank" rel="noopener" class="pub-link" title="View Paper"><i class="fas fa-external-link-alt"></i></a>
+                                    </div>
+                                    <h5 class="pub-title">A Choice of Symmetric Cryptographic Algorithms based on Multi-Criteria Analysis Approach for Securing Smart Grid</h5>
+                                    <p class="pub-authors">Raja Mouachi, <strong>Addi Ait-Mlouk</strong>, Fatima Gharnati and Mustapha Raoufi</p>
+                                    <p class="pub-venue">Indian Journal of Science and Technology, Vol. 10, No. 39, pp. 1-9, DOI:10.17485/ijst/2017/v10i39/119856</p>
+                                </div>
+
+                                <div class="publication-item conference" data-aos="fade-up" data-aos-delay="350">
+                                    <div class="pub-header">
+                                        <span class="pub-type"><i class="fas fa-users"></i> Conference</span>
+                                        <a href="https://www.scilit.net/article/4ef2d053499364fadff95307921a800e" target="_blank" rel="noopener" class="pub-link" title="View Paper"><i class="fas fa-external-link-alt"></i></a>
+                                    </div>
+                                    <h5 class="pub-title">Application of big data analysis with decision Tree for road accident</h5>
+                                    <p class="pub-authors"><strong>Addi Ait-Mlouk</strong>, Gharnati, F., Agouti, T.</p>
+                                    <p class="pub-venue">3rd International Conference on Green Computing and Engineering Technologies, August 8-10, Killaloe, County Clare, Ireland</p>
+                                </div>
+
+                                <div class="publication-item conference" data-aos="fade-up" data-aos-delay="400">
+                                    <div class="pub-header">
+                                        <span class="pub-type"><i class="fas fa-users"></i> Conference</span>
+                                        <a href="#" target="_blank" rel="noopener" class="pub-link" title="View Paper"><i class="fas fa-external-link-alt"></i></a>
+                                    </div>
+                                    <h5 class="pub-title">Intelligent transport system for road safety based data mining approach</h5>
+                                    <p class="pub-authors"><strong>Addi Ait-Mlouk</strong>, Kamsa, I., Gharnati, F., Agouti, T.</p>
+                                    <p class="pub-venue">3rd International Conference on Green Computing and Engineering Technologies, August 8-10, Killaloe, County Clare, Ireland</p>
+                                </div>
+
+                                <div class="publication-item conference" data-aos="fade-up" data-aos-delay="450">
+                                    <div class="pub-header">
+                                        <span class="pub-type"><i class="fas fa-users"></i> Conference</span>
+                                        <a href="#" target="_blank" rel="noopener" class="pub-link" title="View Paper"><i class="fas fa-external-link-alt"></i></a>
+                                    </div>
+                                    <h5 class="pub-title">An Approach Based on MapReduce and Decision Tree to Improve Road Safety in Morocco</h5>
+                                    <p class="pub-authors"><strong>Addi Ait-Mlouk</strong>, Gharnati, F., Agouti, T.</p>
+                                    <p class="pub-venue">International symposium on data engineering and information systems (DEIS'2017), Mai 19-05, 2017, Marrakech, Morocco</p>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- 2016 Publications -->
+                        <div class="year-section" data-aos="fade-up">
+                            <h3 class="year-title">2016</h3>
+                            <div class="publications-list">
+
+                                <div class="publication-item journal" data-aos="fade-up" data-aos-delay="50">
+                                    <div class="pub-header">
+                                        <span class="pub-type"><i class="fas fa-journal-whills"></i> Journal</span>
+                                        <a href="https://link.springer.com/article/10.1007/s40595-016-0070-4" target="_blank" rel="noopener" class="pub-link" title="View Paper"><i class="fas fa-external-link-alt"></i></a>
+                                    </div>
+                                    <h5 class="pub-title">Multi-Agent Based Modeling for Extracting Relevant Association Rules Using a Multi-Criteria Analysis Approach</h5>
+                                    <p class="pub-authors"><strong>Addi Ait-Mlouk</strong>, Gharnati, F. Agouti, T.</p>
+                                    <p class="pub-venue">Vietnam Journal of Computer Science, Vol.3, N.4, pp 235–245, 2016</p>
+                                </div>
+
+                                <div class="publication-item conference" data-aos="fade-up" data-aos-delay="100">
+                                    <div class="pub-header">
+                                        <span class="pub-type"><i class="fas fa-users"></i> Conference</span>
+                                        <a href="https://ieeexplore.ieee.org/document/7479311" target="_blank" rel="noopener" class="pub-link" title="View Paper"><i class="fas fa-external-link-alt"></i></a>
+                                    </div>
+                                    <h5 class="pub-title">An approach based on association rules mining to improve road safety in Morocco</h5>
+                                    <p class="pub-authors"><strong>Addi Ait-Mlouk</strong>, A. Tarik and G. Fatima</p>
+                                    <p class="pub-venue">International Conference on Information Technology for Organizations Development (IT4OD), Fez, 2016, pp. 1-6</p>
+                                </div>
+
+                                <div class="publication-item conference" data-aos="fade-up" data-aos-delay="150">
+                                    <div class="pub-header">
+                                        <span class="pub-type"><i class="fas fa-users"></i> Conference</span>
+                                        <a href="#" target="_blank" rel="noopener" class="pub-link" title="View Paper"><i class="fas fa-external-link-alt"></i></a>
+                                    </div>
+                                    <h5 class="pub-title">Mining Traffic Accident from Big Data: The case study of Morocco</h5>
+                                    <p class="pub-authors"><strong>Addi Ait-Mlouk</strong>, Gharnati, F., Agouti, T.</p>
+                                    <p class="pub-venue">The First International Conference of High Innovation in Computer Science (ICHICS'2016), June 01-03, 2016, Kenitra, Morocco</p>
+                                </div>
+
+                                <div class="publication-item conference" data-aos="fade-up" data-aos-delay="200">
+                                    <div class="pub-header">
+                                        <span class="pub-type"><i class="fas fa-users"></i> Conference</span>
+                                        <a href="#" target="_blank" rel="noopener" class="pub-link" title="View Paper"><i class="fas fa-external-link-alt"></i></a>
+                                    </div>
+                                    <h5 class="pub-title">Formation Science des Données</h5>
+                                    <p class="pub-authors"><strong>Addi Ait-Mlouk</strong></p>
+                                    <p class="pub-venue">La Conférence Internationale Francophone AAFD SFC, Mai 22-26, 2016, Marrakech, Morocco</p>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- 2015 Publications -->
+                        <div class="year-section" data-aos="fade-up">
+                            <h3 class="year-title">2015</h3>
+                            <div class="publications-list">
+
+                                <div class="publication-item conference" data-aos="fade-up" data-aos-delay="50">
+                                    <div class="pub-header">
+                                        <span class="pub-type"><i class="fas fa-users"></i> Conference</span>
+                                        <a href="https://ieeexplore.ieee.org/document/7426886" target="_blank" rel="noopener" class="pub-link" title="View Paper"><i class="fas fa-external-link-alt"></i></a>
+                                    </div>
+                                    <h5 class="pub-title">A choice of relevant association rules based on multi-criteria analysis approach</h5>
+                                    <p class="pub-authors"><strong>Addi Ait-mlouk</strong>, A. Tarik, G. Fatima and D. Badi</p>
+                                    <p class="pub-venue">5th International Conference on Information and Communication Technology and Accessibility (ICTA), Marrakech, Morocco, 2015, pp. 1-6</p>
+                                </div>
+
+                                <div class="publication-item conference" data-aos="fade-up" data-aos-delay="100">
+                                    <div class="pub-header">
+                                        <span class="pub-type"><i class="fas fa-users"></i> Conference</span>
+                                        <a href="https://ieeexplore.ieee.org/document/7233078" target="_blank" rel="noopener" class="pub-link" title="View Paper"><i class="fas fa-external-link-alt"></i></a>
+                                    </div>
+                                    <h5 class="pub-title">Comparative survey of association rule mining algorithms based on multiple-criteria decision analysis approach</h5>
+                                    <p class="pub-authors"><strong>Addi Ait-Mlouk</strong>, A. Tarik and G. Fatima</p>
+                                    <p class="pub-venue">3rd International Conference on Control, Engineering and Information Technology (CEIT), Tlemcen, Algeria 2015, pp. 1-6</p>
+                                </div>
+
+                                <div class="publication-item conference" data-aos="fade-up" data-aos-delay="150">
+                                    <div class="pub-header">
+                                        <span class="pub-type"><i class="fas fa-users"></i> Conference</span>
+                                        <a href="#" target="_blank" rel="noopener" class="pub-link" title="View Paper"><i class="fas fa-external-link-alt"></i></a>
+                                    </div>
+                                    <h5 class="pub-title">Association Rules Mining based On Electre Tri Method</h5>
+                                    <p class="pub-authors"><strong>Addi Ait-Mlouk</strong>, Gharnati, F., Agouti, T.</p>
+                                    <p class="pub-venue">The 4th International Conference on Software Engineering and New Technologies (ICSENT'2015), December, 20-24, 2015, Istanbul, Turkey</p>
+                                </div>
+
+                                <div class="publication-item conference" data-aos="fade-up" data-aos-delay="200">
+                                    <div class="pub-header">
+                                        <span class="pub-type"><i class="fas fa-users"></i> Conference</span>
+                                        <a href="#" target="_blank" rel="noopener" class="pub-link" title="View Paper"><i class="fas fa-external-link-alt"></i></a>
+                                    </div>
+                                    <h5 class="pub-title">Evaluation of association rules extraction algorithms</h5>
+                                    <p class="pub-authors"><strong>Addi Ait-Mlouk</strong>, Gharnati, F., Agouti, T.</p>
+                                    <p class="pub-venue">International Conference on Networked Systems (NETYS'2015), May 13-15, 2015. Agadir, Morocco</p>
+                                </div>
+
+                                <div class="publication-item conference" data-aos="fade-up" data-aos-delay="250">
+                                    <div class="pub-header">
+                                        <span class="pub-type"><i class="fas fa-users"></i> Conference</span>
+                                        <a href="#" target="_blank" rel="noopener" class="pub-link" title="View Paper"><i class="fas fa-external-link-alt"></i></a>
+                                    </div>
+                                    <h5 class="pub-title">Classification of routing Protocol in WSNs</h5>
+                                    <p class="pub-authors">Aznaoui, H., <strong>Addi Ait-Mlouk</strong></p>
+                                    <p class="pub-venue">The 4th International Conference on Software Engineering and New Technologies (ICSENT-2015), December, 20-24, 2015, Istanbul, Turkey</p>
+                                </div>
+
+                                <div class="publication-item conference" data-aos="fade-up" data-aos-delay="300">
+                                    <div class="pub-header">
+                                        <span class="pub-type"><i class="fas fa-users"></i> Conference</span>
+                                        <a href="#" target="_blank" rel="noopener" class="pub-link" title="View Paper"><i class="fas fa-external-link-alt"></i></a>
+                                    </div>
+                                    <h5 class="pub-title">A comparative study of routing protocols in WSN</h5>
+                                    <p class="pub-authors">H. Aznaoui, S. Raghay, L. Aziz and <strong>Addi Ait-Mlouk</strong></p>
+                                    <p class="pub-venue">5th International Conference on Information and Communication Technology and Accessibility (ICTA), Marrakech, Morocco, 2015, pp. 1-6</p>
+                                </div>
+
+                                <div class="publication-item conference" data-aos="fade-up" data-aos-delay="350">
+                                    <div class="pub-header">
+                                        <span class="pub-type"><i class="fas fa-users"></i> Conference</span>
+                                        <a href="#" target="_blank" rel="noopener" class="pub-link" title="View Paper"><i class="fas fa-external-link-alt"></i></a>
+                                    </div>
+                                    <h5 class="pub-title">On selecting interestingness measures for association rules extraction based on electre tri method</h5>
+                                    <p class="pub-authors"><strong>Addi Ait-Mlouk</strong>, Gharnati, F., Agouti, T.</p>
+                                    <p class="pub-venue">1er forum de la recherche scientifique, Jun, 2015. Marrakech, Morocco</p>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- Publication Summary -->
+                        <div class="text-center mt-5" data-aos="fade-up">
+                            <p class="text-muted">
+                                Showing all 50+ publications (1 PhD Thesis, 20+ Journal Articles, 25+ Conference Papers, 1 Book Chapter)
+                            </p>
+                            <p class="mt-3">
+                                <a href="https://scholar.google.com/citations?user=nvgiplcAAAAJ&hl=en" target="_blank" rel="noopener" class="btn btn-outline-primary">
+                                    <i class="fas fa-graduation-cap me-2"></i>
+                                    View Google Scholar Profile
+                                </a>
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Modern Footer -->
+    <footer class="modern-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="footer-section">
+                            <div class="footer-brand mb-4">
+                                <img src="img/personal/me-2.jpg" alt="Dr. Addi Ait-Mlouk" class="footer-logo me-2">
+                                <span class="footer-brand-text">Dr. Addi Ait-Mlouk</span>
+                            </div>
+                            <p class="footer-description">
+                                Advancing the frontiers of computer science and data analytics through 
+                                innovative research and academic excellence.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-6">
+                        <div class="footer-section">
+                            <h5 class="footer-title">Navigation</h5>
+                            <ul class="footer-links">
+                                <li><a href="home.html">Home</a></li>
+                                <li><a href="about.html">About</a></li>
+                                <li><a href="research.html">Research</a></li>
+                                <li><a href="publications.html">Publications</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-6">
+                        <div class="footer-section">
+                            <h5 class="footer-title">Academic</h5>
+                            <ul class="footer-links">
+                                <li><a href="projects.html">Projects</a></li>
+                                <li><a href="teaching.html">Teaching</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                                <li><a href="cv/cv_phd_aitmlouk.pdf">Download CV</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="footer-section">
+                            <h5 class="footer-title">Connect</h5>
+                            <div class="social-links">
+                                <a href="#" class="social-link" aria-label="LinkedIn">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                                <a href="#" class="social-link" aria-label="Google Scholar">
+                                    <i class="fas fa-graduation-cap"></i>
+                                </a>
+                                <a href="#" class="social-link" aria-label="ResearchGate">
+                                    <i class="fab fa-researchgate"></i>
+                                </a>
+                                <a href="#" class="social-link" aria-label="ORCID">
+                                    <i class="fab fa-orcid"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <p class="footer-copyright">
+                            © 2025 Dr. Addi Ait-Mlouk. All rights reserved.
+                        </p>
+                    </div>
+                    <div class="col-md-6 text-md-end">
+                        <div class="footer-links-bottom">
+                            <a href="#" class="footer-link-bottom">Privacy Policy</a>
+                            <a href="#" class="footer-link-bottom">Terms of Use</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <!-- JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Custom Scripts -->
+    <script src="js/modern-multipage.js"></script>
+    
+    <!-- Initialize Everything -->
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            easing: 'ease-out-quad',
+            once: true,
+            offset: 50
+        });
+    </script>
+    
+    <!-- Publications-specific functionality -->
+    <script>
+        // Publications search and filter functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const searchInput = document.getElementById('publicationSearch');
+            const filterTabs = document.querySelectorAll('.filter-tab');
+            const publications = document.querySelectorAll('.publication-item');
+
+            // Search functionality
+            if (searchInput) {
+                searchInput.addEventListener('input', function() {
+                    const searchTerm = this.value.toLowerCase();
+                    publications.forEach(publication => {
+                        const title = publication.querySelector('.pub-title').textContent.toLowerCase();
+                        const authors = publication.querySelector('.pub-authors').textContent.toLowerCase();
+                        const venue = publication.querySelector('.pub-venue').textContent.toLowerCase();
+
+                        if (title.includes(searchTerm) || authors.includes(searchTerm) || venue.includes(searchTerm)) {
+                            publication.style.display = 'block';
+                        } else {
+                            publication.style.display = 'none';
+                        }
+                    });
+                });
+            }
+
+            // Filter functionality
+            filterTabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    // Remove active class from all tabs
+                    filterTabs.forEach(t => t.classList.remove('active'));
+                    this.classList.add('active');
+
+                    const filter = this.dataset.filter;
+                    publications.forEach(publication => {
+                        if (filter === 'all' || publication.classList.contains(filter)) {
+                            publication.style.display = 'block';
+                        } else {
+                            publication.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+
+    <!-- Compact Publications List Styling -->
+    <style>
+        .academic-links {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .academic-links .btn {
+            padding: 0.6rem 1.5rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .academic-links .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+        }
+
+        .publications-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .publication-item {
+            background: rgba(255, 255, 255, 0.7);
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(156, 163, 175, 0.2);
+            border-radius: 0.5rem;
+            padding: 1rem 1.25rem;
+            transition: all 0.2s ease;
+        }
+
+        .publication-item:hover {
+            transform: translateX(4px);
+            border-color: var(--primary-color);
+            box-shadow: 0 2px 8px rgba(37, 99, 235, 0.1);
+        }
+
+        .pub-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.5rem;
+        }
+
+        .pub-type {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            background: var(--primary-color);
+            color: white;
+            border-radius: 0.25rem;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+
+        .pub-type.thesis-type {
+            background: #6366f1;
+        }
+
+        .pub-type.chapter-type {
+            background: #8b5cf6;
+        }
+
+        .pub-link {
+            color: var(--primary-color);
+            font-size: 1.1rem;
+            transition: all 0.2s ease;
+        }
+
+        .pub-link:hover {
+            color: var(--secondary-color);
+            transform: scale(1.1);
+        }
+
+        .pub-title {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.4rem;
+            line-height: 1.4;
+        }
+
+        .pub-authors {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin-bottom: 0.3rem;
+            line-height: 1.3;
+        }
+
+        .pub-venue {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-bottom: 0;
+            font-style: italic;
+        }
+
+        /* Dark theme support */
+        [data-theme="dark"] .publication-item {
+            background: rgba(30, 41, 59, 0.7);
+            border-color: rgba(100, 116, 139, 0.3);
+        }
+
+        [data-theme="dark"] .publication-item:hover {
+            border-color: var(--primary-color);
+            box-shadow: 0 2px 8px rgba(37, 99, 235, 0.2);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .publication-item {
+                padding: 0.875rem 1rem;
+            }
+
+            .pub-title {
+                font-size: 0.9rem;
+            }
+
+            .pub-authors {
+                font-size: 0.8rem;
+            }
+
+            .pub-venue {
+                font-size: 0.75rem;
+            }
+        }
+    </style>
+</body>
+</html>

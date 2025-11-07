@@ -1,108 +1,335 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <title>Dr. Addi Ait-Mlouk Official Website</title>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <meta name="author" content="owwwlab.com">
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-        
-        <meta name="description" content="Faculty profile page" />
-        <meta name="keywords" content="faculty profile, theme,css, html, jquery, transition, transform, 3d, css3" />
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <!-- SEO Meta Tags -->
+    <title>Latest News & Updates - Dr. Addi Ait-Mlouk</title>
+    <meta name="description" content="Latest news and updates from Dr. Addi Ait-Mlouk's research activities and academic achievements.">
+    <meta name="keywords" content="Dr. Addi Ait-Mlouk, news, updates, research, conferences, publications">
+    <meta name="author" content="Dr. Addi Ait-Mlouk">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="img/personal/me-2.jpg">
+    <link rel="apple-touch-icon" href="img/personal/me-2.jpg">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/portfolio-custom.css">
+    <link rel="stylesheet" href="css/modern-multipage.css">
+    
+    <!-- Enhanced Theme Initialization Script -->
+    <script>
+        (function() {
+            try {
+                const savedTheme = localStorage.getItem('theme') || 'light';
+                
+                function setThemeOnElement(element, theme) {
+                    if (element && typeof element.setAttribute === 'function') {
+                        element.setAttribute('data-theme', theme);
+                        return true;
+                    }
+                    return false;
+                }
+                
+                setThemeOnElement(document.documentElement, savedTheme);
+                
+                function initializeBodyTheme() {
+                    if (document.body) {
+                        setThemeOnElement(document.body, savedTheme);
+                        
+                        if (savedTheme === 'dark') {
+                            document.body.classList.add('dark-theme');
+                            document.documentElement.classList.add('dark-theme');
+                        } else {
+                            document.body.classList.add('light-theme');
+                            document.documentElement.classList.add('light-theme');
+                        }
+                    }
+                }
+                
+                if (document.body) {
+                    initializeBodyTheme();
+                } else {
+                    if (document.readyState === 'loading') {
+                        document.addEventListener('DOMContentLoaded', initializeBodyTheme);
+                    } else {
+                        setTimeout(initializeBodyTheme, 0);
+                    }
+                    window.addEventListener('load', initializeBodyTheme);
+                }
+                
+            } catch (error) {
+                console.error('Theme initialization error:', error);
+                if (document.documentElement) {
+                    document.documentElement.setAttribute('data-theme', 'light');
+                }
+            }
+        })();
+    </script>
+</head>
 
-        <link rel="shortcut icon" href="../favicon.ico">
+<body class="modern-body">
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen modern-loading">
+        <div class="loading-content">
+            <div class="loading-spinner">
+                <div class="spinner-circle"></div>
+            </div>
+            <div class="loading-text">
+                <h3 class="brand-text">Loading...</h3>
+            </div>
+        </div>
+    </div>
 
-        <!--CSS styles-->
-        <link rel="stylesheet" href="css/bootstrap.css">
-        <link rel="stylesheet" href="css/font-awesome.min.css">  
-        <link rel="stylesheet" href="css/perfect-scrollbar-0.4.5.min.css">
-        <link rel="stylesheet" href="css/magnific-popup.css">
-        <link rel="stylesheet" href="css/style.css">
-        <link id="theme-style" rel="stylesheet" href="css/theme-style.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="css/bootstrap-social.css">
+    <!-- Modern Navigation with Glass Morphism -->
+    <nav id="main-navbar" class="navbar navbar-expand-lg fixed-top modern-nav glass-nav" data-aos="fade-down">
+        <div class="container-fluid px-4">
+            <a class="navbar-brand modern-brand" href="home.html">
+                <div class="brand-container">
+                    <img src="img/personal/me-2.jpg" alt="Dr. Addi Ait-Mlouk" class="brand-logo">
+                    <span class="brand-text"></span>
+                </div>
+            </a>
+            
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto modern-nav-list">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="home.html" data-page="home">
+                            <i class="fas fa-home nav-icon"></i>
+                            <span>Home</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html" data-page="about">
+                            <i class="fas fa-user nav-icon"></i>
+                            <span>About</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="research.html" data-page="research">
+                            <i class="fas fa-microscope nav-icon"></i>
+                            <span>Research</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="publications.html" data-page="publications">
+                            <i class="fas fa-file-alt nav-icon"></i>
+                            <span>Publications</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="projects.html" data-page="projects">
+                            <i class="fas fa-project-diagram nav-icon"></i>
+                            <span>Projects</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="teaching.html" data-page="teaching">
+                            <i class="fas fa-chalkboard-teacher nav-icon"></i>
+                            <span>Teaching</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="divers.html" data-page="divers">
+                            <i class="fas fa-th nav-icon"></i>
+                            <span>Divers</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html" data-page="contact">
+                            <i class="fas fa-envelope nav-icon"></i>
+                            <span>Contact</span>
+                        </a>
+                    </li>
+                </ul>
 
-        
-        <!--/CSS styles-->
-        <!--Javascript files-->
-        <script type="text/javascript" src="js/jquery-1.10.2.js"></script>
-        <script type="text/javascript" src="js/TweenMax.min.js"></script>
-        <script type="text/javascript" src="js/jquery.touchSwipe.min.js"></script>
-        <script type="text/javascript" src="js/jquery.carouFredSel-6.2.1-packed.js"></script>
-        <script type="text/javascript" src="js/modernizr.custom.63321.js"></script>
-        <script type="text/javascript" src="js/jquery.dropdownit.js"></script>
-        <script type="text/javascript" src="js/jquery.stellar.min.js"></script>
-        <script type="text/javascript" src="js/ScrollToPlugin.min.js"></script>
-        <script type="text/javascript" src="js/bootstrap.min.js"></script>
-        <script type="text/javascript" src="js/jquery.mixitup.min.js"></script>
-        <script type="text/javascript" src="js/masonry.min.js"></script>
-        <script type="text/javascript" src="js/perfect-scrollbar-0.4.5.with-mousewheel.min.js"></script>
-        <script type="text/javascript" src="js/magnific-popup.js"></script>
-        <script type="text/javascript" src="js/custom.js"></script>
-        <!--/Javascript files-->
+                <!-- Dark Mode Toggle -->
+                <div class="navbar-actions d-flex align-items-center">
+                    <button id="theme-toggle" class="btn btn-ghost btn-sm me-3" aria-label="Toggle theme">
+                        <i class="fas fa-sun theme-icon light-icon"></i>
+                        <i class="fas fa-moon theme-icon dark-icon"></i>
+                    </button>
+                    
+                    <button class="navbar-toggler modern-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                        <span class="toggler-line"></span>
+                        <span class="toggler-line"></span>
+                        <span class="toggler-line"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
 
-    </head>
-    <body>
-        <div>
-            <div >
-                <div id="biography" class="page home">
-                    <div class="pageheader">
-                        <div class="headercontent">
-                            <div class="section-container">
-                                <div class="row">
-                                    <div class="clearfix visible-sm visible-xs"></div>
-                                    <div class="col-sm-12 col-md-12">
-                                        <h3 class="title">Latest News & Updates →</h3>
-
-                                        <!-- News: Federated Learning Conference 2025 -->
-                                        <div class="news-item">
-                                            <h4 style="color: red;">🎤 Federated Learning Conference 2025 – Third Edition in Dubrovnik, Croatia! 🌍</h4>
-                                            <p class="text">
-                                                We are thrilled to announce the third edition of the <strong>Federated Learning Conference (FLTA 2025)</strong>,
-                                                which will take place in the beautiful city of Dubrovnik, Croatia.
-                                                Join leading researchers, industry experts, and AI practitioners as we explore the latest advancements in Federated Learning,
-                                                Privacy-Preserving AI, and Decentralized Intelligence.
-                                            </p>
-                                            <p>
-                                                🔗 <a href="https://flta-conference.org/flta-2025/" target="_blank" style="color: blue;">Visit Conference Website</a>
-                                            </p>
-                                        </div>
-
-                                        <hr>
-
-                                        <hr>
-
-                                        <p class="text">
-                                            Stay tuned for more updates!
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>        
-                        </div>
+    <!-- News Section -->
+    <section class="section-padding" style="margin-top: 100px;">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="section-header text-center mb-5" data-aos="fade-up">
+                        <h1 class="section-title">Latest News & Updates</h1>
+                        <p class="section-subtitle">
+                            Stay informed about my latest activities, news, and academic accomplishments
+                        </p>
                     </div>
+                    
+                    <!-- News List -->
+                    <div class="news-list" data-aos="fade-up" data-aos-delay="200">
+                        
+                        <!-- News Item 1 -->
+                        <div class="news-item">
+                            <h3 class="news-title">🎤 Federated Learning and Intelligent Computing Systems 2026 – Second Edition in Valencia, Spain!</h3>
+                            <p class="news-content">
+                                We are thrilled to announce the second edition of the <strong>The 2nd International Conference on Federated Learning and Intelligent Computing Systems (FLICS2026)</strong>,
+                                which will take place in the beautiful city of Valencia, Spain.
+                                Join leading researchers, industry experts, and AI practitioners as we explore the latest advancements in Federated Learning,
+                                Privacy-Preserving AI, and Decentralized Intelligence.
+                            </p>
+                            <p class="news-link">
+                                🔗 <a href="https://intelligent-systems.net/flics2026/" target="_blank">Visit Conference Website</a>
+                            </p>
+                            <div class="news-date">December 2024</div>
+                        </div>
 
-                    <div class="pagecontents">
-                        <div class="section color-1">
-                            <div class="section-container">
-                                <div class="row">
-                                   <div class="news-item">
-                                            <h4 style="color: red;">🚀 We Are Recruiting a PhD Student for Our New Project: <strong><a href="https://proctwin.eu/">ProcTwin</a></strong>! 🎓</h4>
-                                            <p class="text">
-                                                We are excited to announce an open PhD position in our new research project, <strong>ProcTwin</strong>.
-                                                This project focuses on cutting-edge AI and Federated Learning solutions for digital twins.
-                                                If you have a strong background in AI, machine learning, or related fields, and you're passionate about innovation,
-                                                we encourage you to apply!
-                                            </p>
-                                            <p>
-                                                🔗 <a href="https://www.his.se/" target="_blank" style="color: blue;">Apply Now [Closed]</a>
-                                            </p>
-                                        </div>
-                                </div>    
-                            </div>
-                        </div>                          
+                        <!-- News Item 2 -->
+                        <div class="news-item">
+                            <h3 class="news-title">🚀 We Are Recruiting a PhD Student for Our New Project: <strong><a href="https://proctwin.eu/">ProcTwin</a></strong>! 🎓</h3>
+                            <p class="news-content">
+                                We are excited to announce an open PhD position in our new research project, <strong>ProcTwin</strong>.
+                                This project focuses on cutting-edge AI and Federated Learning solutions for digital twins.
+                                If you have a strong background in AI, machine learning, or related fields, and you're passionate about innovation,
+                                we encourage you to apply!
+                            </p>
+                            <p class="news-link">
+                                🔗 <a href="https://www.his.se/" target="_blank">Apply Now [Closed]</a>
+                            </p>
+                            <div class="news-date">November 2024</div>
+                        </div>
+
+                    </div>
+                    
+                    <!-- Back to Home -->
+                    <div class="text-center mt-5" data-aos="fade-up" data-aos-delay="400">
+                        <a href="home.html" class="btn btn-outline-primary">
+                            <i class="fas fa-arrow-left me-2"></i>
+                            Back to Home
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
-    </body>
-</html>
+    </section>
 
+    <!-- Footer -->
+    <footer class="modern-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="footer-section">
+                            <div class="footer-brand mb-4">
+                                <img src="img/personal/me-2.jpg" alt="Dr. Addi Ait-Mlouk" class="footer-logo me-2">
+                                <span class="footer-brand-text">Dr. Addi Ait-Mlouk</span>
+                            </div>
+                            <p class="footer-description">
+                                Advancing the frontiers of computer science and data analytics through 
+                                innovative research and academic excellence.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-6">
+                        <div class="footer-section">
+                            <h5 class="footer-title">Navigation</h5>
+                            <ul class="footer-links">
+                                <li><a href="home.html">Home</a></li>
+                                <li><a href="about.html">About</a></li>
+                                <li><a href="research.html">Research</a></li>
+                                <li><a href="publications.html">Publications</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-6">
+                        <div class="footer-section">
+                            <h5 class="footer-title">Academic</h5>
+                            <ul class="footer-links">
+                                <li><a href="projects.html">Projects</a></li>
+                                <li><a href="teaching.html">Teaching</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                                <li><a href="cv/cv_phd_aitmlouk.pdf">Download CV</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="footer-section">
+                            <h5 class="footer-title">Connect</h5>
+                            <div class="social-links">
+                                <a href="#" class="social-link" aria-label="LinkedIn">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                                <a href="#" class="social-link" aria-label="Google Scholar">
+                                    <i class="fas fa-graduation-cap"></i>
+                                </a>
+                                <a href="#" class="social-link" aria-label="ResearchGate">
+                                    <i class="fab fa-researchgate"></i>
+                                </a>
+                                <a href="#" class="social-link" aria-label="ORCID">
+                                    <i class="fab fa-orcid"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <p class="footer-copyright">
+                            © 2025 Dr. Addi Ait-Mlouk. All rights reserved.
+                        </p>
+                    </div>
+                    <div class="col-md-6 text-md-end">
+                        <div class="footer-links-bottom">
+                            <a href="#" class="footer-link-bottom">Privacy Policy</a>
+                            <a href="#" class="footer-link-bottom">Terms of Use</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/modern-multipage.js"></script>
+    
+    <!-- Initialize AOS -->
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-out-quad',
+            once: true,
+            offset: 50
+        });
+    </script>
+</body>
+</html>

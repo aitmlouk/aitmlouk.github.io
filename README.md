@@ -1,2 +1,0 @@
-# addi
-My personal website

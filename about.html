@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Dr. Addi Ait-Mlouk - Academic Portfolio</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Learn about Dr. Addi Ait-Mlouk's academic background, research expertise, and professional journey in computer science and data analytics.">
+    <meta name="keywords" content="Dr. Addi Ait-Mlouk, academic, researcher, University of Skövde, data science, machine learning, AI, Sweden">
+    <meta name="author" content="Dr. Addi Ait-Mlouk">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="About - Dr. Addi Ait-Mlouk | Academic Portfolio">
+    <meta property="og:description" content="Learn about Dr. Addi Ait-Mlouk's academic background and research expertise.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://addi-ait-mlouk.github.io/about.html">
+    <meta property="og:image" content="img/personal/me-2.jpg">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="About - Dr. Addi Ait-Mlouk">
+    <meta name="twitter:description" content="Learn about Dr. Addi Ait-Mlouk's academic background and research expertise.">
+    
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#2563eb">
+    <link rel="manifest" href="manifest.json">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Dr. Addi Ait-Mlouk">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="img/personal/me-2.jpg">
+    <link rel="apple-touch-icon" href="img/personal/me-2.jpg">
+    
+    <!-- Preload Critical Resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" as="style">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/portfolio-custom.css">
+    <link rel="stylesheet" href="css/modern-multipage.css">
+    
+    <!-- Enhanced Theme Initialization Script -->
+    <script>
+        (function() {
+            try {
+                const savedTheme = localStorage.getItem('theme') || 'light';
+                console.log('Initializing theme:', savedTheme);
+                
+                // Robust DOM element checking and setting
+                function setThemeOnElement(element, theme) {
+                    if (element && typeof element.setAttribute === 'function') {
+                        element.setAttribute('data-theme', theme);
+                        return true;
+                    }
+                    return false;
+                }
+                
+                // Set theme on document element immediately
+                setThemeOnElement(document.documentElement, savedTheme);
+                
+                // Handle body element
+                function initializeBodyTheme() {
+                    if (document.body) {
+                        setThemeOnElement(document.body, savedTheme);
+                        
+                        // Add class-based styling for immediate effect
+                        if (savedTheme === 'dark') {
+                            document.body.classList.add('dark-theme');
+                            document.documentElement.classList.add('dark-theme');
+                        } else {
+                            document.body.classList.add('light-theme');
+                            document.documentElement.classList.add('light-theme');
+                        }
+                    }
+                }
+                
+                // Initialize immediately if body exists, otherwise wait
+                if (document.body) {
+                    initializeBodyTheme();
+                } else {
+                    // Multiple fallback approaches
+                    if (document.readyState === 'loading') {
+                        document.addEventListener('DOMContentLoaded', initializeBodyTheme);
+                    } else {
+                        // DOM is already ready
+                        setTimeout(initializeBodyTheme, 0);
+                    }
+                    
+                    // Additional fallback
+                    window.addEventListener('load', initializeBodyTheme);
+                }
+                
+            } catch (error) {
+                console.error('Theme initialization error:', error);
+                // Fallback: set light theme
+                if (document.documentElement) {
+                    document.documentElement.setAttribute('data-theme', 'light');
+                }
+            }
+        })();
+    </script>
+</head>
+
+<body class="modern-body">
+    <!-- Loading Screen with Modern Design -->
+    <div id="loading-screen" class="loading-screen modern-loading">
+        <div class="loading-content">
+            <div class="loading-spinner">
+                <div class="spinner-circle"></div>
+            </div>
+            <div class="loading-text">
+                <h3 class="brand-text">Loading...</h3>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modern Navigation with Glass Morphism -->
+    <nav id="main-navbar" class="navbar navbar-expand-lg fixed-top modern-nav glass-nav" data-aos="fade-down">
+        <div class="container-fluid px-4">
+            <a class="navbar-brand modern-brand" href="home.html">
+                <div class="brand-container">
+                    <img src="img/personal/me-2.jpg" alt="Dr. Addi Ait-Mlouk" class="brand-logo">
+                    <span class="brand-text"></span>
+                </div>
+            </a>
+            
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto modern-nav-list">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="home.html" data-page="home">
+                            <i class="fas fa-home nav-icon"></i>
+                            <span>Home</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html" data-page="about">
+                            <i class="fas fa-user nav-icon"></i>
+                            <span>About</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="research.html" data-page="research">
+                            <i class="fas fa-microscope nav-icon"></i>
+                            <span>Research</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="publications.html" data-page="publications">
+                            <i class="fas fa-file-alt nav-icon"></i>
+                            <span>Publications</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="projects.html" data-page="projects">
+                            <i class="fas fa-project-diagram nav-icon"></i>
+                            <span>Projects</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="teaching.html" data-page="teaching">
+                            <i class="fas fa-chalkboard-teacher nav-icon"></i>
+                            <span>Teaching</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="divers.html" data-page="divers">
+                            <i class="fas fa-th nav-icon"></i>
+                            <span>Divers</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html" data-page="contact">
+                            <i class="fas fa-envelope nav-icon"></i>
+                            <span>Contact</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <!-- Dark Mode Toggle -->
+                <div class="navbar-actions d-flex align-items-center">
+                    <button id="theme-toggle" class="btn btn-ghost btn-sm me-3" aria-label="Toggle theme">
+                        <i class="fas fa-sun theme-icon light-icon"></i>
+                        <i class="fas fa-moon theme-icon dark-icon"></i>
+                    </button>
+                    
+                    <button class="navbar-toggler modern-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                        <span class="toggler-line"></span>
+                        <span class="toggler-line"></span>
+                        <span class="toggler-line"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Biography Section -->
+    <section id="biography" class="section-padding">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="section-header text-center mb-5" data-aos="fade-up">
+                        <h2 class="section-title">Academic Biography</h2>
+                        <p class="section-subtitle">
+                            A journey through academia, research, and innovation
+                        </p>
+                    </div>
+                    
+                    <div class="biography-content" data-aos="fade-up" data-aos-delay="200">
+                        <div class="glass-card">
+                            <div class="card-body p-5">
+                                <p class="lead mb-4">
+                                    Dr. Addi Ait-Mlouk is an <b>Associate Professor (Docent)</b> of Artificial Intelligence and Data Science at the School of Informatics, <a href="https://www.his.se/" target="_blank">University of Skövde</a>, Sweden. He served as the Director of the Data Science Master's Programme (2023–2024), showcasing his leadership in shaping AI education and mentoring the next generation of data scientists.
+                                </p>
+
+                                <p class="mb-4">
+                                    Before joining the University of Skövde, Addi was a Postdoctoral Researcher at <a href="https://www.uu.se/" target="_blank">Uppsala University</a> (2020–2022), where he worked on a Scalable Federated Learning project at the Department of Information Technology, Division of Scientific Computing. Prior to that, he was a Postdoctoral Researcher at <a href="https://www.umu.se/en/" target="_blank">Umeå University</a> (2018–2020), contributing to a WASP project on Privacy-Aware Data Federation for heterogeneous registry data. His research focuses on solving real-world challenges through cutting-edge AI and data science techniques. His expertise spans Federated Learning, Machine Learning, Data Mining, Information Retrieval, Conversational AI, Open Linked Data, Knowledge Graphs, and Natural Language Processing.
+                                </p>
+
+                                <p class="mb-4">
+                                    Addi holds a Master's degree in Information Systems Engineering and a PhD in Data Mining from Cadi Ayyad University, Marrakech, earned in 2011 and 2018, respectively. Beyond academia, he is a highly sought-after consultant and trainer specializing in CRM, ERP, Data Science, and AI. Passionate about emerging technologies, he collaborates with businesses to drive digital transformation and innovation. He actively contributes to the scientific community as a reviewer and program committee member for leading conferences and journals, including ICDM, ECIR, and ECML-PKDD.
+                                </p>
+
+                                <p class="mb-0">
+                                    Born in Imi N'Ouakka, Morocco, in 1990, Addi is always open to new collaboration opportunities in academia and industry. Feel free to connect with him at aitmlouk@gmail.com.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section class="section-padding bg-light-gray">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-12">
+                    <div class="section-header text-center mb-5" data-aos="fade-up">
+                        <h2 class="section-title">Academic Journey</h2>
+                        <p class="section-subtitle">
+                            Professional experience and educational background
+                        </p>
+                    </div>
+                    
+                    <div class="row g-5">
+                        <!-- Professional Experience Timeline -->
+                        <div class="col-lg-6">
+                            <div class="timeline-header mb-4" data-aos="fade-right">
+                                <h3 class="timeline-section-title">
+                                    <i class="fas fa-briefcase me-2"></i>
+                                    Professional Experience
+                                </h3>
+                            </div>
+                            
+                            <div class="timeline-container">
+                                <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
+                                    <div class="timeline-date">09/2022 - Present</div>
+                                    <h4 class="timeline-title">Associate Professor (Docent)</h4>
+                                    <div class="timeline-location">University of Skövde - School of Informatics, Sweden</div>
+                                    <p class="timeline-description">
+                                        <em>Artificial Intelligence and Data Science</em><br>
+                                        Leading research in Federated Learning, served as Director of the Data Science Master's Programme (2023–2024).
+                                    </p>
+                                    <div class="timeline-achievements">
+                                        <span class="achievement-badge">
+                                            <i class="fas fa-graduation-cap"></i>
+                                            Programme Director
+                                        </span>
+                                        <span class="achievement-badge">
+                                            <i class="fas fa-brain"></i>
+                                            AI & Data Science
+                                        </span>
+                                    </div>
+                                </div>
+                                
+                                <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+                                    <div class="timeline-date">09/2020 - 09/2022</div>
+                                    <h4 class="timeline-title">Postdoctoral Researcher</h4>
+                                    <div class="timeline-location">Uppsala University - Computer Science, Sweden</div>
+                                    <p class="timeline-description">
+                                        <em>Scalable Federated Machine Learning</em><br>
+                                        Department of Information Technology, Division of Scientific Computing.
+                                    </p>
+                                    <div class="timeline-achievements">
+                                        <span class="achievement-badge">
+                                            <i class="fas fa-network-wired"></i>
+                                            Federated Learning
+                                        </span>
+                                        <span class="achievement-badge">
+                                            <i class="fas fa-university"></i>
+                                            Uppsala University
+                                        </span>
+                                    </div>
+                                </div>
+                                
+                                <div class="timeline-item" data-aos="fade-up" data-aos-delay="300">
+                                    <div class="timeline-date">09/2018 - 09/2020</div>
+                                    <h4 class="timeline-title">Postdoctoral Researcher</h4>
+                                    <div class="timeline-location">Umeå University - Computer Science, Umeå, Sweden</div>
+                                    <p class="timeline-description">
+                                        <em>Privacy-aware Federated Database Infrastructure (2018-2020)</em><br>
+                                        WASP project focusing on privacy-preserving data integration and analysis.
+                                    </p>
+                                    <div class="timeline-achievements">
+                                        <span class="achievement-badge">
+                                            <i class="fas fa-shield-alt"></i>
+                                            Privacy-Aware Data
+                                        </span>
+                                        <span class="achievement-badge">
+                                            <i class="fas fa-database"></i>
+                                            WASP Project
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <div class="timeline-item" data-aos="fade-up" data-aos-delay="400">
+                                    <div class="timeline-date">09/2017 - 07/2018</div>
+                                    <h4 class="timeline-title">Assistant Professor</h4>
+                                    <div class="timeline-location">Private University Marrakech - Computer Science, Marrakech, Morocco</div>
+                                    <p class="timeline-description">
+                                        Teaching and research in computer science, focusing on data science and machine learning applications.
+                                    </p>
+                                    <div class="timeline-achievements">
+                                        <span class="achievement-badge">
+                                            <i class="fas fa-chalkboard-teacher"></i>
+                                            Teaching
+                                        </span>
+                                        <span class="achievement-badge">
+                                            <i class="fas fa-university"></i>
+                                            Morocco
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <div class="timeline-item" data-aos="fade-up" data-aos-delay="500">
+                                    <div class="timeline-date">02/2015 - 06/2017</div>
+                                    <h4 class="timeline-title">Teaching Assistant</h4>
+                                    <div class="timeline-location">Cadi Ayyad University, Faculty of Science Semlalia, Marrakech, Morocco</div>
+                                    <p class="timeline-description">
+                                        Supporting teaching activities and conducting research in data mining and machine learning.
+                                    </p>
+                                    <div class="timeline-achievements">
+                                        <span class="achievement-badge">
+                                            <i class="fas fa-graduation-cap"></i>
+                                            Teaching Assistant
+                                        </span>
+                                        <span class="achievement-badge">
+                                            <i class="fas fa-flask"></i>
+                                            Research
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Education & Training Timeline -->
+                        <div class="col-lg-6">
+                            <div class="timeline-header mb-4" data-aos="fade-left">
+                                <h3 class="timeline-section-title">
+                                    <i class="fas fa-graduation-cap me-2"></i>
+                                    Education & Training
+                                </h3>
+                            </div>
+                            
+                            <div class="timeline-container">
+                                <div class="timeline-item" data-aos="fade-up" data-aos-delay="150">
+                                    <div class="timeline-date">2014 - 2018</div>
+                                    <h4 class="timeline-title">Ph.D. in Computer Science [Data Mining]</h4>
+                                    <div class="timeline-location">Cadi Ayyad University, Faculty of Science Semlalia, Marrakech, Morocco</div>
+                                    <p class="timeline-description">
+                                        Doctoral research focused on data mining and association rules mining with applications
+                                        to road safety. Developed innovative approaches for extracting relevant patterns from large datasets.
+                                    </p>
+                                    <div class="timeline-achievements">
+                                        <span class="achievement-badge">
+                                            <i class="fas fa-graduation-cap"></i>
+                                            Data Mining
+                                        </span>
+                                        <span class="achievement-badge">
+                                            <i class="fas fa-database"></i>
+                                            Big Data
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <div class="timeline-item" data-aos="fade-up" data-aos-delay="250">
+                                    <div class="timeline-date">2011 - 2013</div>
+                                    <h4 class="timeline-title">Master of Information Systems Engineering</h4>
+                                    <div class="timeline-location">Cadi Ayyad University, Faculty of Science Semlalia, Marrakech, Morocco</div>
+                                    <p class="timeline-description">
+                                        Master's degree specializing in information systems engineering with focus on
+                                        data management, software engineering, and enterprise systems.
+                                    </p>
+                                    <div class="timeline-achievements">
+                                        <span class="achievement-badge">
+                                            <i class="fas fa-cogs"></i>
+                                            Information Systems
+                                        </span>
+                                        <span class="achievement-badge">
+                                            <i class="fas fa-server"></i>
+                                            Engineering
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <div class="timeline-item" data-aos="fade-up" data-aos-delay="350">
+                                    <div class="timeline-date">2008 - 2011</div>
+                                    <h4 class="timeline-title">B.Sc. in Software Engineering</h4>
+                                    <div class="timeline-location">Mly Ismail University, Sciences and Technologies Faculty, Errachidia, Morocco</div>
+                                    <p class="timeline-description">
+                                        Bachelor's degree in software engineering with focus on programming,
+                                        algorithms, and software development methodologies.
+                                    </p>
+                                    <div class="timeline-achievements">
+                                        <span class="achievement-badge">
+                                            <i class="fas fa-code"></i>
+                                            Software Engineering
+                                        </span>
+                                        <span class="achievement-badge">
+                                            <i class="fas fa-laptop-code"></i>
+                                            Programming
+                                        </span>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="section-header text-center mb-5" data-aos="fade-up">
+                <h2 class="section-title">Services</h2>
+                <p class="section-subtitle">
+                    Professional consulting and training services
+                </p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="glass-card h-100">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-start mb-3">
+                                <div class="service-icon me-3">
+                                    <i class="fas fa-brain"></i>
+                                </div>
+                                <div>
+                                    <h4 class="service-title">AI & Machine Learning Consulting</h4>
+                                    <p class="service-description mb-0">
+                                        Helping businesses design and integrate tailored AI and machine learning solutions to optimize operations and drive innovation.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="glass-card h-100">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-start mb-3">
+                                <div class="service-icon me-3">
+                                    <i class="fas fa-network-wired"></i>
+                                </div>
+                                <div>
+                                    <h4 class="service-title">Federated Learning & Decentralized AI</h4>
+                                    <p class="service-description mb-0">
+                                        Implementing privacy-preserving, collaborative AI systems using federated learning and decentralized architectures for sensitive and distributed data environments.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="glass-card h-100">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-start mb-3">
+                                <div class="service-icon me-3">
+                                    <i class="fas fa-chart-bar"></i>
+                                </div>
+                                <div>
+                                    <h4 class="service-title">Data Science & Analytics</h4>
+                                    <p class="service-description mb-0">
+                                        Delivering actionable insights through advanced data analytics, predictive modeling, and decision support systems.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="glass-card h-100">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-start mb-3">
+                                <div class="service-icon me-3">
+                                    <i class="fas fa-cogs"></i>
+                                </div>
+                                <div>
+                                    <h4 class="service-title">ERP & AI</h4>
+                                    <p class="service-description mb-0">
+                                        Building and customizing ERP systems enhanced with AI capabilities to streamline business processes and improve efficiency.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-12" data-aos="fade-up" data-aos-delay="500">
+                    <div class="glass-card h-100">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-start mb-3">
+                                <div class="service-icon me-3">
+                                    <i class="fas fa-graduation-cap"></i>
+                                </div>
+                                <div>
+                                    <h4 class="service-title">Educational Training</h4>
+                                    <p class="service-description mb-0">
+                                        Providing hands-on training and workshops in AI, Data Science, Federated Learning, and ERP systems for individuals, teams, and organizations.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="section-padding bg-light-gray">
+        <div class="container">
+            <div class="section-header text-center mb-5" data-aos="fade-up">
+                <h2 class="section-title">Core Values</h2>
+                <p class="section-subtitle">
+                    The principles that guide my academic and research endeavors
+                </p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="value-card text-center">
+                        <div class="value-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h4 class="value-title">Innovation</h4>
+                        <p class="value-description">
+                            Constantly seeking new approaches and breakthrough solutions 
+                            to complex problems.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="value-card text-center">
+                        <div class="value-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h4 class="value-title">Collaboration</h4>
+                        <p class="value-description">
+                            Fostering meaningful partnerships and knowledge sharing 
+                            across disciplines.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="value-card text-center">
+                        <div class="value-icon">
+                            <i class="fas fa-medal"></i>
+                        </div>
+                        <h4 class="value-title">Excellence</h4>
+                        <p class="value-description">
+                            Maintaining the highest standards in research, teaching, 
+                            and academic integrity.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="value-card text-center">
+                        <div class="value-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <h4 class="value-title">Impact</h4>
+                        <p class="value-description">
+                            Creating research that makes a meaningful difference 
+                            in society and industry.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modern Footer -->
+    <footer class="modern-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="footer-section">
+                            <div class="footer-brand mb-4">
+                                <img src="img/personal/me-2.jpg" alt="Dr. Addi Ait-Mlouk" class="footer-logo me-2">
+                                <span class="footer-brand-text">Dr. Addi Ait-Mlouk</span>
+                            </div>
+                            <p class="footer-description">
+                                Advancing the frontiers of computer science and data analytics through 
+                                innovative research and academic excellence.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-6">
+                        <div class="footer-section">
+                            <h5 class="footer-title">Navigation</h5>
+                            <ul class="footer-links">
+                                <li><a href="home.html">Home</a></li>
+                                <li><a href="about.html">About</a></li>
+                                <li><a href="research.html">Research</a></li>
+                                <li><a href="publications.html">Publications</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-6">
+                        <div class="footer-section">
+                            <h5 class="footer-title">Academic</h5>
+                            <ul class="footer-links">
+                                <li><a href="projects.html">Projects</a></li>
+                                <li><a href="teaching.html">Teaching</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                                <li><a href="cv/cv_phd_aitmlouk.pdf">Download CV</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="footer-section">
+                            <h5 class="footer-title">Connect</h5>
+                            <div class="social-links">
+                                <a href="#" class="social-link" aria-label="LinkedIn">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                                <a href="#" class="social-link" aria-label="Google Scholar">
+                                    <i class="fas fa-graduation-cap"></i>
+                                </a>
+                                <a href="#" class="social-link" aria-label="ResearchGate">
+                                    <i class="fab fa-researchgate"></i>
+                                </a>
+                                <a href="#" class="social-link" aria-label="ORCID">
+                                    <i class="fab fa-orcid"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <p class="footer-copyright">
+                            © 2025 Dr. Addi Ait-Mlouk. All rights reserved.
+                        </p>
+                    </div>
+                    <div class="col-md-6 text-md-end">
+                        <div class="footer-links-bottom">
+                            <a href="#" class="footer-link-bottom">Privacy Policy</a>
+                            <a href="#" class="footer-link-bottom">Terms of Use</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Custom Scripts -->
+    <script src="js/modern-multipage.js"></script>
+    
+    <!-- Initialize Everything -->
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            easing: 'ease-out-quad',
+            once: true,
+            offset: 50
+        });
+    </script>
+</body>
+</html>

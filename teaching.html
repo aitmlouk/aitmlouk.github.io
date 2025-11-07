@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <!-- SEO Meta Tags -->
+    <title>Teaching - Dr. Addi Ait-Mlouk | Academic Portfolio</title>
+    <meta name="description" content="Explore Dr. Addi Ait-Mlouk's teaching philosophy, courses, and educational contributions in computer science and data analytics.">
+    <meta name="keywords" content="Dr. Addi Ait-Mlouk, teaching, courses, education, computer science, data analytics, pedagogy">
+    <meta name="author" content="Dr. Addi Ait-Mlouk">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Teaching - Dr. Addi Ait-Mlouk | Academic Portfolio">
+    <meta property="og:description" content="Teaching philosophy, courses, and educational contributions.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://addiait-mlouk.github.io/teaching.html">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Teaching - Dr. Addi Ait-Mlouk">
+    <meta name="twitter:description" content="Teaching philosophy and educational contributions.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="img/personal/me-2.jpg">
+    <link rel="apple-touch-icon" href="img/personal/me-2.jpg">
+    
+    <!-- Preload Critical Resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" as="style">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/portfolio-custom.css">
+    <link rel="stylesheet" href="css/modern-multipage.css">
+    
+    <!-- Enhanced Theme Initialization Script -->
+    <script>
+        (function() {
+            try {
+                const savedTheme = localStorage.getItem('theme') || 'light';
+                console.log('Initializing theme:', savedTheme);
+                
+                // Robust DOM element checking and setting
+                function setThemeOnElement(element, theme) {
+                    if (element && typeof element.setAttribute === 'function') {
+                        element.setAttribute('data-theme', theme);
+                        return true;
+                    }
+                    return false;
+                }
+                
+                // Set theme on document element immediately
+                setThemeOnElement(document.documentElement, savedTheme);
+                
+                // Handle body element
+                function initializeBodyTheme() {
+                    if (document.body) {
+                        setThemeOnElement(document.body, savedTheme);
+                        
+                        // Add class-based styling for immediate effect
+                        if (savedTheme === 'dark') {
+                            document.body.classList.add('dark-theme');
+                            document.documentElement.classList.add('dark-theme');
+                        } else {
+                            document.body.classList.add('light-theme');
+                            document.documentElement.classList.add('light-theme');
+                        }
+                    }
+                }
+                
+                // Initialize immediately if body exists, otherwise wait
+                if (document.body) {
+                    initializeBodyTheme();
+                } else {
+                    // Multiple fallback approaches
+                    if (document.readyState === 'loading') {
+                        document.addEventListener('DOMContentLoaded', initializeBodyTheme);
+                    } else {
+                        // DOM is already ready
+                        setTimeout(initializeBodyTheme, 0);
+                    }
+                    
+                    // Additional fallback
+                    window.addEventListener('load', initializeBodyTheme);
+                }
+                
+            } catch (error) {
+                console.error('Theme initialization error:', error);
+                // Fallback: set light theme
+                if (document.documentElement) {
+                    document.documentElement.setAttribute('data-theme', 'light');
+                }
+            }
+        })();
+    </script>
+</head>
+
+<body class="modern-body">
+    <!-- Loading Screen with Modern Design -->
+    <div id="loading-screen" class="loading-screen modern-loading">
+        <div class="loading-content">
+            <div class="loading-spinner">
+                <div class="spinner-circle"></div>
+            </div>
+            <div class="loading-text">
+                <h3 class="brand-text">Loading...</h3>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modern Navigation with Glass Morphism -->
+    <nav id="main-navbar" class="navbar navbar-expand-lg fixed-top modern-nav glass-nav" data-aos="fade-down">
+        <div class="container-fluid px-4">
+            <a class="navbar-brand modern-brand" href="home.html">
+                <div class="brand-container">
+                    <img src="img/personal/me-2.jpg" alt="Dr. Addi Ait-Mlouk" class="brand-logo">
+                    <span class="brand-text"></span>
+                </div>
+            </a>
+            
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto modern-nav-list">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="home.html" data-page="home">
+                            <i class="fas fa-home nav-icon"></i>
+                            <span>Home</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html" data-page="about">
+                            <i class="fas fa-user nav-icon"></i>
+                            <span>About</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="research.html" data-page="research">
+                            <i class="fas fa-microscope nav-icon"></i>
+                            <span>Research</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="publications.html" data-page="publications">
+                            <i class="fas fa-file-alt nav-icon"></i>
+                            <span>Publications</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="projects.html" data-page="projects">
+                            <i class="fas fa-project-diagram nav-icon"></i>
+                            <span>Projects</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="teaching.html" data-page="teaching">
+                            <i class="fas fa-chalkboard-teacher nav-icon"></i>
+                            <span>Teaching</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="divers.html" data-page="divers">
+                            <i class="fas fa-th nav-icon"></i>
+                            <span>Divers</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html" data-page="contact">
+                            <i class="fas fa-envelope nav-icon"></i>
+                            <span>Contact</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <!-- Dark Mode Toggle -->
+                <div class="navbar-actions d-flex align-items-center">
+                    <button id="theme-toggle" class="btn btn-ghost btn-sm me-3" aria-label="Toggle theme">
+                        <i class="fas fa-sun theme-icon light-icon"></i>
+                        <i class="fas fa-moon theme-icon dark-icon"></i>
+                    </button>
+                    
+                    <button class="navbar-toggler modern-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                        <span class="toggler-line"></span>
+                        <span class="toggler-line"></span>
+                        <span class="toggler-line"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Teaching Philosophy Section -->
+    <section id="philosophy" class="section-padding">
+        <div class="container">
+            <div class="section-header text-center mb-5" data-aos="fade-up">
+                <h2 class="section-title">Teaching Philosophy & Development</h2>
+                <p class="section-subtitle">
+                    Educational philosophy and continuous professional development
+                </p>
+            </div>
+            
+            <div class="row g-5">
+                <!-- Left Column: Teaching Philosophy -->
+                <div class="col-lg-6">
+                    <div class="philosophy-content" data-aos="fade-up" data-aos-delay="200">
+                        <div class="glass-card">
+                            <div class="card-body p-5">
+                                <div class="philosophy-quote mb-4">
+                                    <i class="fas fa-quote-left quote-icon"></i>
+                                    <p class="quote-text mb-0">
+                                        I specialize in teaching data science, machine learning, AI, and business information systems across multiple universities including Cadi Ayyad University, Umeå University, and Uppsala University. Having mentored over 300 graduate students online at Openclassrooms, my teaching philosophy centers on bridging theory with practice through hands-on, project-based learning. I emphasize clarity and adaptability, continuously refining my methods based on student feedback to make computer science accessible and applicable to real-world challenges.
+                                    </p>
+                                </div>
+                                
+                                <div class="philosophy-principles">
+                                    <div class="principle mb-4">
+                                        <h5 class="principle-title">
+                                            <i class="fas fa-lightbulb text-primary me-2"></i>
+                                            Active Learning
+                                        </h5>
+                                        <p class="principle-description">
+                                            I believe in hands-on, project-based learning that encourages students to 
+                                            apply theoretical concepts to real-world problems, fostering deeper 
+                                            understanding and practical skills.
+                                        </p>
+                                    </div>
+                                    
+                                    <div class="principle mb-4">
+                                        <h5 class="principle-title">
+                                            <i class="fas fa-users text-primary me-2"></i>
+                                            Collaborative Environment
+                                        </h5>
+                                        <p class="principle-description">
+                                            Creating an inclusive classroom where students feel comfortable to share ideas, 
+                                            ask questions, and learn from each other's diverse perspectives and experiences.
+                                        </p>
+                                    </div>
+                                    
+                                    <div class="principle mb-4">
+                                        <h5 class="principle-title">
+                                            <i class="fas fa-microscope text-primary me-2"></i>
+                                            Research Integration
+                                        </h5>
+                                        <p class="principle-description">
+                                            Bringing cutting-edge research into the classroom to expose students to the 
+                                            latest developments and inspire them to contribute to the advancement of knowledge.
+                                        </p>
+                                    </div>
+                                    
+                                    <div class="principle">
+                                        <h5 class="principle-title">
+                                            <i class="fas fa-seedling text-primary me-2"></i>
+                                            Personal Growth
+                                        </h5>
+                                        <p class="principle-description">
+                                            Supporting each student's individual learning journey, recognizing different 
+                                            learning styles, and providing mentorship to help them achieve their full potential.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Right Column: Pedagogical Courses -->
+                <div class="col-lg-6">
+                    <div class="timeline-header mb-4" data-aos="fade-left">
+                        <h3 class="timeline-section-title">
+                            <i class="fas fa-graduation-cap me-2"></i>
+                            Pedagogical Courses (Educational Development)
+                        </h3>
+                    </div>
+                    
+                    <div class="timeline-container">
+                        <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
+                            <div class="timeline-date">11/2021 — 12/2021</div>
+                            <h4 class="timeline-title">Curious about leadership - for future research group leaders</h4>
+                            <div class="timeline-location">Uppsala University, Uppsala, Sweden</div>
+                            <div class="timeline-achievements">
+                                <span class="achievement-badge">
+                                    <i class="fas fa-users"></i>
+                                    Leadership
+                                </span>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+                            <div class="timeline-date">11/2021 — 11/2021</div>
+                            <h4 class="timeline-title">Supervising student presentations in theory and in practice</h4>
+                            <div class="timeline-location">Uppsala University, Uppsala, Sweden</div>
+                            <div class="timeline-achievements">
+                                <span class="achievement-badge">
+                                    <i class="fas fa-presentation"></i>
+                                    Supervision
+                                </span>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item" data-aos="fade-up" data-aos-delay="300">
+                            <div class="timeline-date">08/2021 — 10/2021</div>
+                            <h4 class="timeline-title">Academic Teacher Training Course 1</h4>
+                            <div class="timeline-location">Uppsala University, Uppsala, Sweden</div>
+                            <div class="timeline-achievements">
+                                <span class="achievement-badge">
+                                    <i class="fas fa-chalkboard-teacher"></i>
+                                    Teaching Training
+                                </span>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item" data-aos="fade-up" data-aos-delay="400">
+                            <div class="timeline-date">02/2020 — 04/2021</div>
+                            <h4 class="timeline-title">Supervising Doctoral Students, spring 2021</h4>
+                            <div class="timeline-location">Uppsala University, Uppsala, Sweden</div>
+                            <div class="timeline-achievements">
+                                <span class="achievement-badge">
+                                    <i class="fas fa-user-graduate"></i>
+                                    PhD Supervision
+                                </span>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item" data-aos="fade-up" data-aos-delay="500">
+                            <div class="timeline-date">04/2020 — 05/2021</div>
+                            <h4 class="timeline-title">Assessment, grading and feedback</h4>
+                            <div class="timeline-location">Uppsala University, Uppsala, Sweden</div>
+                            <div class="timeline-achievements">
+                                <span class="achievement-badge">
+                                    <i class="fas fa-clipboard-check"></i>
+                                    Assessment
+                                </span>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item" data-aos="fade-up" data-aos-delay="600">
+                            <div class="timeline-date">03/2020 — 05/2021</div>
+                            <h4 class="timeline-title">Supervising Students for Degree Projects</h4>
+                            <div class="timeline-location">Uppsala University, Uppsala, Sweden</div>
+                            <div class="timeline-achievements">
+                                <span class="achievement-badge">
+                                    <i class="fas fa-project-diagram"></i>
+                                    Project Supervision
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Current Courses Section -->
+    <section id="courses" class="section-padding bg-light-gray">
+        <div class="container">
+            <div class="section-header text-center mb-5" data-aos="fade-up">
+                <h2 class="section-title">Courses I Teach</h2>
+                <p class="section-subtitle">
+                    Current and previous teaching portfolio across Data Science, AI, and Computer Science programs
+                </p>
+            </div>
+
+            <div class="row g-3">
+                <!-- Applied Cloud Computing -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="course-card-simple glass-card text-center">
+                        <h4 class="course-name">Applied Cloud Computing</h4>
+                        <p class="course-info">Uppsala University • 7.5 Credits</p>
+                        <a href="#" class="course-link">Course Page <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+
+                <!-- Data Engineering II -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="150">
+                    <div class="course-card-simple glass-card text-center">
+                        <h4 class="course-name">Data Engineering II</h4>
+                        <p class="course-info"> Uppsala University • 7.5 Credits</p>
+                        <a href="#" class="course-link">Course Page <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+
+                <!-- Data Mining -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="course-card-simple glass-card text-center">
+                        <h4 class="course-name">Data Mining</h4>
+                        <p class="course-info">University of Skövde • 7.5 Credits</p>
+                        <a href="#" class="course-link">Course Page <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+
+                <!-- Intro to Data Science -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="250">
+                    <div class="course-card-simple glass-card text-center">
+                        <h4 class="course-name">Intro to Data Science</h4>
+                        <p class="course-info">University of Skövde • 15 Credits</p>
+                        <a href="#" class="course-link">Course Page <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+
+                <!-- Object Oriented Programming -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="course-card-simple glass-card text-center">
+                        <h4 class="course-name">Object Oriented Programming</h4>
+                        <p class="course-info">University of Skövde • 7.5 Credits</p>
+                        <a href="#" class="course-link">Course Page <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+
+                <!-- Project in Data Science A1F -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="150">
+                    <div class="course-card-simple glass-card text-center">
+                        <h4 class="course-name">Project in Data Science A1F</h4>
+                        <p class="course-info">University of Skövde • 15 Credits</p>
+                        <a href="#" class="course-link">Course Page <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+
+                <!-- Degree Project A1E -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="course-card-simple glass-card text-center">
+                        <h4 class="course-name">Degree Project in IT with Data Science A1E</h4>
+                        <p class="course-info">University of Skövde • 15 Credits</p>
+                        <a href="#" class="course-link">Course Page <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+
+                <!-- Degree Project A2E -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="250">
+                    <div class="course-card-simple glass-card text-center">
+                        <h4 class="course-name">Degree Project in IT with Data Science A2E</h4>
+                        <p class="course-info">University of Skövde • 15 Credits</p>
+                        <a href="#" class="course-link">Course Page <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+
+                <!-- Database Administration -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="course-card-simple glass-card text-center">
+                        <h4 class="course-name">Database Administration (DBA)</h4>
+                        <p class="course-info">Private University of Marrakech • 7.5 Credits</p>
+                        <a href="#" class="course-link">Course Page <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+
+                <!-- Web Development -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="150">
+                    <div class="course-card-simple glass-card text-center">
+                        <h4 class="course-name">Web Development (JS, HTML)</h4>
+                        <p class="course-info">Private University of Marrakech • 7.5 Credits</p>
+                        <a href="#" class="course-link">Course Page <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+
+                <!-- Programming C/C++ -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="course-card-simple glass-card text-center">
+                        <h4 class="course-name">Programming C/C++</h4>
+                        <p class="course-info">Cadi Ayyad University • 7.5 Credits</p>
+                        <a href="#" class="course-link">Course Page <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+
+                <!-- Enterprise Resources Planning -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="course-card-simple glass-card text-center">
+                        <h4 class="course-name">Enterprise Resources Planning (ERP)</h4>
+                        <p class="course-info">IT center</p>
+                        <a href="#" class="course-link">Course Page <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Student Supervision Section -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="section-header text-center mb-5" data-aos="fade-up">
+                <h2 class="section-title">Student Supervision</h2>
+                <p class="section-subtitle">
+                    Mentoring the next generation of researchers and practitioners
+                </p>
+            </div>
+
+            <!-- Supervision Overview Paragraph -->
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-10" data-aos="fade-up">
+                    <div class="glass-card">
+                        <div class="card-body p-4">
+                            <p class="text-center mb-0" style="font-size: 1rem; line-height: 1.7; color: var(--text-primary);">
+                                I am actively involved in <strong>master student supervision and examination</strong>
+                                Each year, I participate in supervising and examining approximately <strong>10 master's students</strong>,
+                                guiding them through their thesis research in areas such as federated learning, machine learning,
+                                data mining, and artificial intelligence. This hands-on mentorship helps students develop both
+                                research skills and practical expertise needed for successful careers in data science and AI.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Modern Footer -->
+    <footer class="modern-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="footer-section">
+                            <div class="footer-brand mb-4">
+                                <img src="img/personal/me-2.jpg" alt="Dr. Addi Ait-Mlouk" class="footer-logo me-2">
+                                <span class="footer-brand-text">Dr. Addi Ait-Mlouk</span>
+                            </div>
+                            <p class="footer-description">
+                                Advancing the frontiers of computer science and data analytics through 
+                                innovative research and academic excellence.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-6">
+                        <div class="footer-section">
+                            <h5 class="footer-title">Navigation</h5>
+                            <ul class="footer-links">
+                                <li><a href="home.html">Home</a></li>
+                                <li><a href="about.html">About</a></li>
+                                <li><a href="research.html">Research</a></li>
+                                <li><a href="publications.html">Publications</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-6">
+                        <div class="footer-section">
+                            <h5 class="footer-title">Academic</h5>
+                            <ul class="footer-links">
+                                <li><a href="projects.html">Projects</a></li>
+                                <li><a href="teaching.html">Teaching</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                                <li><a href="cv/cv_phd_aitmlouk.pdf">Download CV</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="footer-section">
+                            <h5 class="footer-title">Connect</h5>
+                            <div class="social-links">
+                                <a href="#" class="social-link" aria-label="LinkedIn">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                                <a href="#" class="social-link" aria-label="Google Scholar">
+                                    <i class="fas fa-graduation-cap"></i>
+                                </a>
+                                <a href="#" class="social-link" aria-label="ResearchGate">
+                                    <i class="fab fa-researchgate"></i>
+                                </a>
+                                <a href="#" class="social-link" aria-label="ORCID">
+                                    <i class="fab fa-orcid"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <p class="footer-copyright">
+                            © 2025 Dr. Addi Ait-Mlouk. All rights reserved.
+                        </p>
+                    </div>
+                    <div class="col-md-6 text-md-end">
+                        <div class="footer-links-bottom">
+                            <a href="#" class="footer-link-bottom">Privacy Policy</a>
+                            <a href="#" class="footer-link-bottom">Terms of Use</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Custom Scripts -->
+    <script src="js/modern-multipage.js"></script>
+    
+    <!-- Initialize Everything -->
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            easing: 'ease-out-quad',
+            once: true,
+            offset: 50
+        });
+    </script>
+</body>
+</html>

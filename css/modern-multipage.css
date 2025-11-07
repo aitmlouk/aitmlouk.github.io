@@ -1647,7 +1647,7 @@ body.modern-body {
 }
 
 /* ===== MODERN ENHANCEMENT FOR ALL PAGES ===== */
-/* Inspired by home.html - Latest UX/Design Trends 2024 */
+/* Inspired by index.html - Latest UX/Design Trends 2024 */
 
 /* Enhanced Spacing Variables */
 :root {
@@ -1685,7 +1685,7 @@ html[data-theme="light"] {
     background: #ffffff !important;
 }
 
-/* Modern Hero Section for all pages (inspired by home.html) */
+/* Modern Hero Section for all pages (inspired by index.html) */
 .hero-section {
     min-height: 100vh;
     display: flex;
@@ -3094,7 +3094,7 @@ body {
 }
 
 /* ===== COMPREHENSIVE PAGE-SPECIFIC ENHANCEMENTS ===== */
-/* Making all pages as beautiful and modern as home.html */
+/* Making all pages as beautiful and modern as index.html */
 
 /* ABOUT PAGE ENHANCEMENTS */
 .biography-content {

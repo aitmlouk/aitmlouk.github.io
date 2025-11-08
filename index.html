@@ -138,8 +138,21 @@
                     <span class="brand-text"></span>
                 </div>
             </a>
-            
-            
+
+            <!-- Mobile Menu Controls - Always Visible -->
+            <div class="navbar-controls d-flex align-items-center ms-auto d-lg-none">
+                <button id="theme-toggle-mobile" class="btn btn-ghost btn-sm me-2" aria-label="Toggle theme">
+                    <i class="fas fa-sun theme-icon light-icon"></i>
+                    <i class="fas fa-moon theme-icon dark-icon"></i>
+                </button>
+
+                <button class="navbar-toggler modern-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="toggler-line"></span>
+                    <span class="toggler-line"></span>
+                    <span class="toggler-line"></span>
+                </button>
+            </div>
+
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mx-auto modern-nav-list">
                     <li class="nav-item">
@@ -192,17 +205,11 @@
                     </li>
                 </ul>
 
-                <!-- Dark Mode Toggle -->
-                <div class="navbar-actions d-flex align-items-center">
-                    <button id="theme-toggle" class="btn btn-ghost btn-sm me-3" aria-label="Toggle theme">
+                <!-- Dark Mode Toggle - Desktop Only -->
+                <div class="navbar-actions d-none d-lg-flex align-items-center">
+                    <button id="theme-toggle" class="btn btn-ghost btn-sm" aria-label="Toggle theme">
                         <i class="fas fa-sun theme-icon light-icon"></i>
                         <i class="fas fa-moon theme-icon dark-icon"></i>
-                    </button>
-                    
-                    <button class="navbar-toggler modern-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                        <span class="toggler-line"></span>
-                        <span class="toggler-line"></span>
-                        <span class="toggler-line"></span>
                     </button>
                 </div>
 

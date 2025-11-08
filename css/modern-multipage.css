@@ -1479,20 +1479,166 @@ body.modern-body {
     }
 }
 
-@media (max-width: 768px) {
+/* ===== RESPONSIVE DESIGN IMPROVEMENTS ===== */
+
+@media (max-width: 991.98px) {
+    /* Navbar Mobile Styles */
     .modern-nav {
         padding: 0.75rem 0;
     }
-    
+
+    /* Ensure navbar brand and controls are in one row */
+    .modern-nav .container-fluid {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .navbar-brand {
+        flex: 0 0 auto;
+    }
+
+    .navbar-controls {
+        display: flex !important;
+        gap: 0.5rem;
+        align-items: center;
+        margin-left: auto !important;
+    }
+
+    .navbar-collapse {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--glass-bg);
+        backdrop-filter: blur(20px);
+        border-bottom: 1px solid var(--glass-border);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        margin-top: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-out;
+    }
+
+    .navbar-collapse.show {
+        max-height: 80vh;
+        overflow-y: auto;
+    }
+
+    .modern-nav-list {
+        flex-direction: column;
+        padding: 1rem 0;
+        gap: 0;
+        width: 100%;
+    }
+
+    .nav-item {
+        width: 100%;
+        border-bottom: 1px solid var(--glass-border);
+    }
+
+    .nav-item:last-child {
+        border-bottom: none;
+    }
+
+    .nav-link {
+        padding: 1rem 1.5rem !important;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        width: 100%;
+        transition: all 0.2s ease;
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+        background: rgba(37, 99, 235, 0.1);
+        padding-left: 2rem !important;
+    }
+
+    .nav-icon {
+        font-size: 1.125rem;
+        width: 24px;
+        text-align: center;
+    }
+
+    /* Mobile toggler visibility */
+    .modern-toggler {
+        display: block;
+        z-index: 1001;
+    }
+
+    .navbar-actions {
+        padding: 1rem 1.5rem;
+        border-top: 1px solid var(--glass-border);
+    }
+
+    /* Dark theme adjustments for mobile */
+    [data-theme="dark"] .navbar-collapse {
+        background: rgba(15, 23, 42, 0.98);
+        border-bottom-color: rgba(255, 255, 255, 0.1);
+    }
+
+    [data-theme="dark"] .nav-item {
+        border-bottom-color: rgba(255, 255, 255, 0.1);
+    }
+
+    /* Smooth scrolling for mobile menu */
+    .navbar-collapse {
+        -webkit-overflow-scrolling: touch;
+    }
+
+    /* Better touch targets */
+    .navbar-toggler {
+        min-width: 44px;
+        min-height: 44px;
+    }
+
+    #theme-toggle-mobile {
+        min-width: 44px;
+        min-height: 44px;
+    }
+}
+
+@media (max-width: 768px) {
     .brand-logo {
         width: 36px;
         height: 36px;
     }
-    
+
     .brand-text {
         font-size: 1rem;
     }
-    
+
+    /* Biography and teaching content font size adjustments */
+    .biography-content .lead {
+        font-size: 1.1rem !important;
+        line-height: 1.7;
+    }
+
+    .biography-content p {
+        font-size: 1rem !important;
+        line-height: 1.7;
+    }
+
+    .quote-text {
+        font-size: 1rem !important;
+        line-height: 1.6;
+    }
+
+    .philosophy-content p,
+    .principle-description {
+        font-size: 0.95rem !important;
+        line-height: 1.6;
+    }
+
+    /* Reduce card padding on mobile for better readability */
+    .biography-content .card-body,
+    .philosophy-content .card-body {
+        padding: 2rem !important;
+    }
+
     .modern-hero {
         min-height: 90vh;
         padding: 2rem 0;
@@ -1552,6 +1698,55 @@ body.modern-body {
 }
 
 @media (max-width: 576px) {
+    /* Extra small devices - further refinements */
+    .modern-nav .container-fluid {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .navbar-controls {
+        gap: 0.25rem;
+    }
+
+    .brand-logo {
+        width: 32px;
+        height: 32px;
+    }
+
+    .nav-link {
+        padding: 0.875rem 1rem !important;
+        font-size: 0.9375rem;
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+        padding-left: 1.5rem !important;
+    }
+
+    /* Further reduce font sizes for very small screens */
+    .biography-content .lead {
+        font-size: 1.05rem !important;
+    }
+
+    .biography-content p {
+        font-size: 0.95rem !important;
+    }
+
+    .quote-text {
+        font-size: 0.95rem !important;
+    }
+
+    .philosophy-content p,
+    .principle-description {
+        font-size: 0.9rem !important;
+    }
+
+    /* Further reduce padding for very small screens */
+    .biography-content .card-body,
+    .philosophy-content .card-body {
+        padding: 1.5rem !important;
+    }
+
     .hero-stats {
         grid-template-columns: 1fr;
         padding: 1rem;

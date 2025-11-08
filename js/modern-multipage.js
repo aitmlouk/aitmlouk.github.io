@@ -81,19 +81,28 @@ class ModernPortfolio {
     }
 
     updateThemeIcon() {
-        const toggleBtn = document.getElementById('theme-toggle');
-        if (!toggleBtn) return;
+        // Update both desktop and mobile theme toggles
+        const toggleBtns = [
+            document.getElementById('theme-toggle'),
+            document.getElementById('theme-toggle-mobile')
+        ];
 
-        const lightIcon = toggleBtn.querySelector('.light-icon');
-        const darkIcon = toggleBtn.querySelector('.dark-icon');
+        toggleBtns.forEach(toggleBtn => {
+            if (!toggleBtn) return;
 
-        if (this.theme === 'dark') {
-            lightIcon.style.opacity = '0';
-            darkIcon.style.opacity = '1';
-        } else {
-            lightIcon.style.opacity = '1';
-            darkIcon.style.opacity = '0';
-        }
+            const lightIcon = toggleBtn.querySelector('.light-icon');
+            const darkIcon = toggleBtn.querySelector('.dark-icon');
+
+            if (lightIcon && darkIcon) {
+                if (this.theme === 'dark') {
+                    lightIcon.style.opacity = '0';
+                    darkIcon.style.opacity = '1';
+                } else {
+                    lightIcon.style.opacity = '1';
+                    darkIcon.style.opacity = '0';
+                }
+            }
+        });
     }
 
     triggerThemeTransition() {
@@ -107,7 +116,10 @@ class ModernPortfolio {
     initNavigation() {
         const navbar = document.getElementById('main-navbar');
         const themeToggle = document.getElementById('theme-toggle');
+        const themeToggleMobile = document.getElementById('theme-toggle-mobile');
         const navLinks = document.querySelectorAll('.nav-link');
+        const navbarToggler = document.querySelector('.navbar-toggler');
+        const navbarCollapse = document.getElementById('navbarNav');
 
         // Scroll handler for navbar
         let lastScrollY = window.scrollY;
@@ -133,11 +145,42 @@ class ModernPortfolio {
             }
         });
 
-        // Theme toggle
+        // Theme toggle for both desktop and mobile
         if (themeToggle) {
             themeToggle.addEventListener('click', () => {
                 this.toggleTheme();
                 this.addButtonRipple(themeToggle);
+            });
+        }
+
+        if (themeToggleMobile) {
+            themeToggleMobile.addEventListener('click', () => {
+                this.toggleTheme();
+                this.addButtonRipple(themeToggleMobile);
+            });
+        }
+
+        // Close mobile menu when clicking nav links
+        if (navbarCollapse) {
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    if (window.innerWidth < 992 && navbarCollapse.classList.contains('show')) {
+                        const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
+                            toggle: false
+                        });
+                        bsCollapse.hide();
+                    }
+                });
+            });
+        }
+
+        // Update toggler aria-expanded attribute
+        if (navbarToggler && navbarCollapse) {
+            navbarCollapse.addEventListener('show.bs.collapse', () => {
+                navbarToggler.setAttribute('aria-expanded', 'true');
+            });
+            navbarCollapse.addEventListener('hide.bs.collapse', () => {
+                navbarToggler.setAttribute('aria-expanded', 'false');
             });
         }
 

@@ -931,3 +931,151 @@ main {
     transform: translateY(-5px);
     transition: transform 0.3s ease;
 }
+
+/* ===== PHD EXAMINATION SECTION STYLES ===== */
+/* Enhanced hover effects for PhD examination items */
+#phd-examination .publication-item {
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-border);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    box-shadow: var(--shadow-soft);
+}
+
+#phd-examination .publication-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: linear-gradient(to bottom, var(--primary-color), var(--accent-color));
+    transform: scaleY(0);
+    transform-origin: bottom;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#phd-examination .publication-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-strong);
+    border-color: var(--primary-color);
+    border-width: 2px;
+}
+
+#phd-examination .publication-item:hover::before {
+    transform: scaleY(1);
+}
+
+/* Dark mode support for PhD examination section */
+[data-theme="dark"] #phd-examination .publication-item {
+    background: linear-gradient(135deg,
+        rgba(15, 23, 42, 0.9) 0%,
+        rgba(30, 41, 59, 0.8) 100%);
+    border: 1px solid rgba(148, 163, 184, 0.2);
+}
+
+[data-theme="dark"] #phd-examination .publication-item:hover {
+    border-color: var(--primary-light);
+    box-shadow: 0 20px 40px rgba(59, 130, 246, 0.2);
+}
+
+/* ===== DARK MODE SUPPORT FOR PHD SECTIONS ===== */
+/* PhD Students Section - Background and cards */
+[data-theme="dark"] .section-padding.bg-light {
+    background: linear-gradient(135deg,
+        var(--dark-bg-primary) 0%,
+        var(--dark-bg-secondary) 100%) !important;
+}
+
+[data-theme="dark"] .featured-project-card {
+    background: linear-gradient(135deg,
+        rgba(15, 23, 42, 0.9) 0%,
+        rgba(30, 41, 59, 0.8) 100%);
+    border: 1px solid rgba(148, 163, 184, 0.2);
+}
+
+[data-theme="dark"] .featured-project-card:hover {
+    border-color: var(--primary-light);
+    box-shadow: 0 20px 40px rgba(59, 130, 246, 0.2);
+}
+
+/* PhD Examination Section - Additional dark mode support */
+[data-theme="dark"] #phd-examination {
+    background: linear-gradient(135deg,
+        var(--dark-bg-primary) 0%,
+        var(--dark-bg-secondary) 100%) !important;
+}
+
+[data-theme="dark"] .year-title {
+    color: var(--dark-text-primary);
+}
+
+[data-theme="dark"] .pub-title {
+    color: var(--dark-text-primary);
+}
+
+[data-theme="dark"] .pub-authors {
+    color: var(--dark-text-secondary);
+}
+
+[data-theme="dark"] .pub-venue {
+    color: var(--dark-text-secondary);
+}
+
+[data-theme="dark"] .pub-type {
+    background: rgba(37, 99, 235, 0.2);
+    color: var(--primary-light);
+}
+
+[data-theme="dark"] .section-title {
+    color: var(--dark-text-primary);
+}
+
+[data-theme="dark"] .section-subtitle {
+    color: var(--dark-text-secondary);
+}
+
+[data-theme="dark"] .project-title.student-name {
+    color: var(--dark-text-primary);
+}
+
+[data-theme="dark"] .project-description {
+    color: var(--dark-text-secondary);
+}
+
+[data-theme="dark"] .project-category.student-university {
+    color: var(--primary-light);
+    background: rgba(37, 99, 235, 0.2);
+}
+
+/* ===== CORE VALUES SECTION DARK MODE ===== */
+/* Value cards on about.html */
+[data-theme="dark"] .value-card {
+    background: linear-gradient(135deg,
+        rgba(15, 23, 42, 0.9) 0%,
+        rgba(30, 41, 59, 0.8) 100%);
+    border: 1px solid rgba(148, 163, 184, 0.2);
+}
+
+[data-theme="dark"] .value-card:hover {
+    border-color: var(--primary-light);
+    box-shadow: 0 20px 40px rgba(59, 130, 246, 0.2);
+}
+
+[data-theme="dark"] .value-title {
+    color: var(--dark-text-primary);
+}
+
+[data-theme="dark"] .value-description {
+    color: var(--dark-text-secondary);
+}
+
+[data-theme="dark"] .value-icon {
+    background: rgba(37, 99, 235, 0.2);
+    color: var(--primary-light);
+}

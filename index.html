@@ -454,72 +454,90 @@
                 </div>
             </div>
             
-            <div class="row">
-                                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
-                    <div class="news-card glass-card h-100">
-                        <div class="news-date">
-                            <div class="date-badge">
-                                <span class="day">9</span>
-                                <span class="month">June 2025</span>
+            <!-- News Slider Container -->
+            <div class="news-slider-wrapper position-relative" data-aos="fade-up">
+                <div class="news-slider-container">
+                    <div class="news-slider" id="newsSlider">
+                   
+                        <!-- Card 1 -->
+                        <div class="news-slide">
+                            <div class="news-card h-100">
+                                <div class="news-date">
+                                    <div class="date-badge">
+                                        <span class="day">08</span>
+                                        <span class="month">Nov 2024</span>
+                                    </div>
+                                </div>
+                                <div class="news-content">
+                                    <div class="news-category">Job</div>
+                                    <h4 class="news-title">PhD Position - ProcTwin Project</h4>
+                                    <p class="news-excerpt">
+                                        Recruiting PhD student for new research project focusing on cutting-edge
+                                        AI and Federated Learning solutions for digital twins.
+                                    </p>
+                                    <a href="https://proctwin.eu/" class="news-link" target="_blank" rel="noopener noreferrer">
+                                        Read More <i class="fas fa-arrow-right"></i>
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                        <div class="news-content">
-                            <div class="news-category">Conference</div>
-                            <h4 class="news-title">Federated Learning and Intelligent Computing Systems</h4>
-                            <p class="news-excerpt">
-                                Announcing the second edition of FLICS 2026 in Valencia, Spain. 
-                                Join leading researchers in Federated Learning and Privacy-Preserving AI.
-                            </p>
-                            <a href="https://intelligent-systems.net/flics2026/" class="news-link" target="_blank">
-                                Read More <i class="fas fa-arrow-right"></i>
-                            </a>
+
+                        <!-- Card 2 -->
+                         <div class="news-slide">
+                            <div class="news-card h-100">
+                                <div class="news-date">
+                                    <div class="date-badge">
+                                        <span class="day">9</span>
+                                        <span class="month">June 2025</span>
+                                    </div>
+                                </div>
+                                <div class="news-content">
+                                    <div class="news-category">EU Project</div>
+                                    <h4 class="news-title">New Funded EU Project: ProcTwin (2025–2029)</h4>
+                                    <p class="news-excerpt">
+                                        I am excited to announce that I am part of the newly funded EU Project ProcTwin, with a total budget of €4,825,924. Running from 2025 to 2029, this project will focus on digital twin technologies and advanced AI solutions to optimize industrial processes
+                                    </p>
+                                    <a href="https://www.estep.eu/clean-steel-partnership/proctwin" class="news-link" target="_blank" rel="noopener noreferrer">
+                                        Read More <i class="fas fa-arrow-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 4 -->
+                        <div class="news-slide">
+                            <div class="news-card h-100">
+                                <div class="news-date">
+                                    <div class="date-badge">
+                                        <span class="day">22</span>
+                                        <span class="month">June 2024</span>
+                                    </div>
+                                </div>
+                                <div class="news-content">
+                                    <div class="news-category">Promotion</div>
+                                    <h4 class="news-title">Promotion to Associate Professor (Docent)</h4>
+                                    <p class="news-excerpt">
+                                        I'm honored to share that I have recently been promoted to Associate Professor (Docent). This milestone reflects years of dedication to research, teaching, and innovation
+                                    </p>
+                                    <a href="https://www.his.se/" target="_blank" rel="noopener noreferrer" class="news-link">
+                                        Read More <i class="fas fa-arrow-right"></i>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                
-                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
-                    <div class="news-card glass-card h-100">
-                        <div class="news-date">
-                            <div class="date-badge">
-                                <span class="day">08</span>
-                                <span class="month">Nov 2024</span>
-                            </div>
-                        </div>
-                        <div class="news-content">
-                            <div class="news-category">Research</div>
-                            <h4 class="news-title">PhD Position - ProcTwin Project</h4>
-                            <p class="news-excerpt">
-                                Recruiting PhD student for new research project focusing on cutting-edge 
-                                AI and Federated Learning solutions for digital twins.
-                            </p>
-                            <a href="https://proctwin.eu/" class="news-link" target="_blank">
-                                Read More <i class="fas fa-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
-                    <div class="news-card glass-card h-100">
-                        <div class="news-date">
-                            <div class="date-badge">
-                                <span class="day">22</span>
-                                <span class="month">Oct 2024</span>
-                            </div>
-                        </div>
-                        <div class="news-content">
-                            <div class="news-category">Publication</div>
-                            <h4 class="news-title">Privacy-Preserving Research Published</h4>
-                            <p class="news-excerpt">
-                                Latest research on privacy-aware federated database infrastructure 
-                                accepted for publication in top-tier conference.
-                            </p>
-                            <a href="publications.html" class="news-link">
-                                Read More <i class="fas fa-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+
+                <!-- Navigation Arrows -->
+                <button type="button" class="news-slider-arrow news-slider-prev" id="newsPrev" aria-label="Previous news">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button type="button" class="news-slider-arrow news-slider-next" id="newsNext" aria-label="Next news">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+
+                <!-- Slider Indicators -->
+                <div class="news-slider-dots" id="sliderDots"></div>
             </div>
             
             <div class="row mt-4">

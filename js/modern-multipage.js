@@ -55,6 +55,7 @@ class ModernPortfolio {
         this.initStatCounters();
         this.initPageTransitions();
         this.triggerEntranceAnimations();
+        this.initNewsSlider();
     }
 
 
@@ -273,16 +274,20 @@ class ModernPortfolio {
         document.body.appendChild(progressContainer);
         
         
-        // Update progress on scroll
-        window.addEventListener('scroll', () => {
+        // Update progress on scroll with debouncing for performance
+        const updateProgress = () => {
             const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
             const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
             const scrollPercent = scrollHeight > 0 ? (scrollTop / scrollHeight) * 100 : 0;
-            
-            progressBar.style.width = `${Math.min(Math.max(scrollPercent, 0), 100)}%`;
-        });
-        
-        // Test initial setup
+
+            const clampedPercent = Math.min(Math.max(scrollPercent, 0), 100);
+            progressBar.style.width = `${clampedPercent}%`;
+        };
+
+        window.addEventListener('scroll', updateProgress, { passive: true });
+
+        // Initial update on load
+        updateProgress();
     }
 
     // ===== BACK TO TOP BUTTON =====
@@ -943,6 +948,233 @@ class ModernPortfolio {
                 setTimeout(() => inThrottle = false, limit);
             }
         };
+    }
+
+    // ===== NEWS SLIDER =====
+    initNewsSlider() {
+        const slider = document.getElementById('newsSlider');
+        if (!slider) return;
+
+        const slides = slider.querySelectorAll('.news-slide');
+        const prevBtn = document.getElementById('newsPrev');
+        const nextBtn = document.getElementById('newsNext');
+        const dotsContainer = document.getElementById('sliderDots');
+
+        if (!slides.length) return;
+
+        let currentIndex = 0;
+        let slidesToShow = 3;
+        let autoplayInterval = null;
+        const autoplayDelay = 5000;
+
+        // Calculate slides to show based on screen size
+        const updateSlidesToShow = () => {
+            if (window.innerWidth <= 768) {
+                slidesToShow = 1;
+            } else if (window.innerWidth <= 991) {
+                slidesToShow = 2;
+            } else {
+                slidesToShow = 3;
+            }
+        };
+
+        // Calculate total pages
+        const getTotalPages = () => {
+            return Math.max(1, slides.length - slidesToShow + 1);
+        };
+
+        // Create dots
+        const createDots = () => {
+            dotsContainer.innerHTML = '';
+            const totalPages = getTotalPages();
+
+            for (let i = 0; i < totalPages; i++) {
+                const dot = document.createElement('button');
+                dot.className = 'slider-dot';
+                dot.setAttribute('type', 'button');
+                dot.setAttribute('aria-label', `Go to slide ${i + 1}`);
+                if (i === currentIndex) dot.classList.add('active');
+
+                dot.addEventListener('click', () => {
+                    goToSlide(i);
+                    resetAutoplay();
+                });
+
+                dotsContainer.appendChild(dot);
+            }
+        };
+
+        // Update slider position
+        const updateSlider = () => {
+            const slideWidth = slides[0].offsetWidth;
+            const gap = parseFloat(getComputedStyle(slider).gap) || 0;
+            const offset = currentIndex * (slideWidth + gap);
+
+            slider.style.transform = `translateX(-${offset}px)`;
+
+            // Update dots
+            const dots = dotsContainer.querySelectorAll('.slider-dot');
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentIndex);
+            });
+
+            // Update button states
+            updateButtonStates();
+        };
+
+        // Update button states
+        const updateButtonStates = () => {
+            const totalPages = getTotalPages();
+
+            if (prevBtn) {
+                prevBtn.disabled = currentIndex === 0;
+                prevBtn.style.opacity = currentIndex === 0 ? '0.5' : '1';
+                prevBtn.style.cursor = currentIndex === 0 ? 'not-allowed' : 'pointer';
+            }
+
+            if (nextBtn) {
+                nextBtn.disabled = currentIndex >= totalPages - 1;
+                nextBtn.style.opacity = currentIndex >= totalPages - 1 ? '0.5' : '1';
+                nextBtn.style.cursor = currentIndex >= totalPages - 1 ? 'not-allowed' : 'pointer';
+            }
+        };
+
+        // Go to specific slide
+        const goToSlide = (index) => {
+            const totalPages = getTotalPages();
+            currentIndex = Math.max(0, Math.min(index, totalPages - 1));
+            updateSlider();
+        };
+
+        // Next slide
+        const nextSlide = () => {
+            const totalPages = getTotalPages();
+            if (currentIndex < totalPages - 1) {
+                goToSlide(currentIndex + 1);
+            }
+        };
+
+        // Previous slide
+        const prevSlide = () => {
+            if (currentIndex > 0) {
+                goToSlide(currentIndex - 1);
+            }
+        };
+
+        // Autoplay
+        const startAutoplay = () => {
+            stopAutoplay();
+            autoplayInterval = setInterval(() => {
+                const totalPages = getTotalPages();
+                if (currentIndex >= totalPages - 1) {
+                    goToSlide(0);
+                } else {
+                    nextSlide();
+                }
+            }, autoplayDelay);
+        };
+
+        const stopAutoplay = () => {
+            if (autoplayInterval) {
+                clearInterval(autoplayInterval);
+                autoplayInterval = null;
+            }
+        };
+
+        const resetAutoplay = () => {
+            stopAutoplay();
+            startAutoplay();
+        };
+
+        // Touch/swipe support
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        const handleTouchStart = (e) => {
+            touchStartX = e.touches[0].clientX;
+            stopAutoplay();
+        };
+
+        const handleTouchMove = (e) => {
+            touchEndX = e.touches[0].clientX;
+        };
+
+        const handleTouchEnd = () => {
+            const swipeThreshold = 50;
+            const diff = touchStartX - touchEndX;
+
+            if (Math.abs(diff) > swipeThreshold) {
+                if (diff > 0) {
+                    nextSlide();
+                } else {
+                    prevSlide();
+                }
+            }
+            resetAutoplay();
+        };
+
+        // Event listeners
+        if (prevBtn) {
+            prevBtn.addEventListener('click', () => {
+                prevSlide();
+                resetAutoplay();
+            });
+        }
+
+        if (nextBtn) {
+            nextBtn.addEventListener('click', () => {
+                nextSlide();
+                resetAutoplay();
+            });
+        }
+
+        // Touch events
+        slider.addEventListener('touchstart', handleTouchStart, { passive: true });
+        slider.addEventListener('touchmove', handleTouchMove, { passive: true });
+        slider.addEventListener('touchend', handleTouchEnd);
+
+        // Mouse enter/leave for autoplay
+        const sliderWrapper = slider.closest('.news-slider-wrapper');
+        if (sliderWrapper) {
+            sliderWrapper.addEventListener('mouseenter', stopAutoplay);
+            sliderWrapper.addEventListener('mouseleave', startAutoplay);
+        }
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (!slider.closest('.news-slider-wrapper:hover')) return;
+
+            if (e.key === 'ArrowLeft') {
+                prevSlide();
+                resetAutoplay();
+            } else if (e.key === 'ArrowRight') {
+                nextSlide();
+                resetAutoplay();
+            }
+        });
+
+        // Resize handler
+        let resizeTimeout;
+        window.addEventListener('resize', () => {
+            clearTimeout(resizeTimeout);
+            resizeTimeout = setTimeout(() => {
+                const oldSlidesToShow = slidesToShow;
+                updateSlidesToShow();
+
+                if (oldSlidesToShow !== slidesToShow) {
+                    createDots();
+                    goToSlide(0);
+                } else {
+                    updateSlider();
+                }
+            }, 250);
+        });
+
+        // Initialize
+        updateSlidesToShow();
+        createDots();
+        updateSlider();
+        startAutoplay();
     }
 
     // ===== ERROR HANDLING =====

@@ -32,54 +32,7 @@
     <link rel="stylesheet" href="css/modern-multipage.css">
     
     <!-- Enhanced Theme Initialization Script -->
-    <script>
-        (function() {
-            try {
-                const savedTheme = localStorage.getItem('theme') || 'light';
-                
-                function setThemeOnElement(element, theme) {
-                    if (element && typeof element.setAttribute === 'function') {
-                        element.setAttribute('data-theme', theme);
-                        return true;
-                    }
-                    return false;
-                }
-                
-                setThemeOnElement(document.documentElement, savedTheme);
-                
-                function initializeBodyTheme() {
-                    if (document.body) {
-                        setThemeOnElement(document.body, savedTheme);
-                        
-                        if (savedTheme === 'dark') {
-                            document.body.classList.add('dark-theme');
-                            document.documentElement.classList.add('dark-theme');
-                        } else {
-                            document.body.classList.add('light-theme');
-                            document.documentElement.classList.add('light-theme');
-                        }
-                    }
-                }
-                
-                if (document.body) {
-                    initializeBodyTheme();
-                } else {
-                    if (document.readyState === 'loading') {
-                        document.addEventListener('DOMContentLoaded', initializeBodyTheme);
-                    } else {
-                        setTimeout(initializeBodyTheme, 0);
-                    }
-                    window.addEventListener('load', initializeBodyTheme);
-                }
-                
-            } catch (error) {
-                console.error('Theme initialization error:', error);
-                if (document.documentElement) {
-                    document.documentElement.setAttribute('data-theme', 'light');
-                }
-            }
-        })();
-    </script>
+    <script src="js/theme-init.js"></script>
 </head>
 
 <body class="modern-body">
